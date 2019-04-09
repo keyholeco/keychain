@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './_profilePicture.styl'
 
 const ProfilePicture = (props) => {
   const [errored, setErrored] = React.useState(!props.src)
