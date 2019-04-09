@@ -45,12 +45,12 @@ storiesOf('Atoms/ProfilePicture', module)
         style={picStyles}
       />
       <ProfilePicture
-        src="http://cdn.keyhole.co/user_logos/203518_logo_secondary.png?v=1866382919"
+        src="https://cdn.keyhole.co/user_logos/203518_logo_secondary.png?v=1866382919"
         platform="news"
         style={picStyles}
       />
       <ProfilePicture
-        src="http://cdn.keyhole.co/user_logos/203518_logo.png?v=764696917"
+        src="https://cdn.keyhole.co/user_logos/203518_logo.png?v=764696917"
         platform="blogs"
         style={picStyles}
       />
