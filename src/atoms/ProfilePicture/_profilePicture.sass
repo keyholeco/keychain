@@ -1,0 +1,97 @@
+// User Profile Picture
+.key-profilePicture
+  position: relative
+  display: inline-block
+  font-size: 1em
+  img
+    position: relative
+    background-color: #f2f2f2
+    border: 1px solid #e0e0e0
+    width: 2em
+    height: 2em
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 4px
+    color: #444
+    object-fit: cover
+  &:not(.key-profilePicture--error):after
+    font-family: 'FontAwesome'
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: -0.5em
+    right: -0.5em
+    width: 1.5em
+    height: 1.5em
+    display: flex
+    font-size: 0.5em
+    border-radius: 50%
+    color: white
+    padding: .15em
+  &.key-profilePicture--twitter:after
+    content: '\f099'
+    background-color: $twitter-blue
+  &.key-profilePicture--instagram:after
+    content: '\f16d'
+    background-color: $instagram-purple
+  &.key-profilePicture--youtube:after
+    content: '\f16a'
+    background-color: $youtube-red
+  &.key-profilePicture--facebook:after
+    content: '\f09a'
+    background-color: $facebook-blue
+  &.key-profilePicture--news:after
+    content: '\f1ea'
+    background-color: $news-gray
+  &.key-profilePicture--blogs:after
+    content: '\f09e'
+    background-color: $blogs-yellow
+  &.key-profilePicture--forums:after
+    content: '\f0e6'
+    background-color: $forums-green
+  &.key-profilePicture--error
+    img
+      display: none
+    &:after
+      font-family: 'FontAwesome'
+      justify-content: center
+      align-items: center
+      display: flex
+      font-size: 1.5em
+      padding: .15em
+      background-color: transparent
+    &.key-profilePicture--twitter:after
+      content: '\f099'
+      color: $twitter-blue
+    &.key-profilePicture--instagram:after
+      content: '\f16d'
+      color: $instagram-purple
+    &.key-profilePicture--youtube:after
+      content: '\f167'
+      color: $youtube-red
+    &.key-profilePicture--facebook:after
+      content: '\f082'
+      color: $facebook-blue
+    &.key-profilePicture--news:after
+      content: '\f1ea'
+      color: $news-gray
+    &.key-profilePicture--blogs:after
+      content: '\f09e'
+      color: $blogs-yellow
+    &.key-profilePicture--forums:after
+      content: '\f0e6'
+      color: $forums-green
+    &.key-profilePicture--brand:after
+      content: '\f005'
+      color: $gray
+    &.key-profilePicture--gray
+      &.key-profilePicture--twitter,
+      &.key-profilePicture--instagram,
+      &.key-profilePicture--youtube,
+      &.key-profilePicture--facebook,
+      &.key-profilePicture--news,
+      &.key-profilePicture--blogs,
+      &.key-profilePicture--forums
+        &::after
+          color: $gray

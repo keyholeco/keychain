@@ -1,0 +1,149 @@
+.key-colorBlocks
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  align-items: flex-start
+  padding: 1.5em 0
+.key-colorBlock
+  display: inline-flex
+  text-align: center
+  flex-direction: column
+  justify-content: center
+  align-items: flex-start
+  .key-color
+    position: relative
+    display: inline-block
+    width: 150px
+    height: 80px
+    background-color: #eee
+    box-shadow: inset 0 0 0 5px rgba($dark-blue, .1)
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      @include font-heading
+      background-color: transparent
+      color: transparent
+      font-size: 1em
+      text-align: center
+      display: flex
+      justify-content: center
+      align-items: center
+      transition: 300ms ease-in-out
+    &:not(.key-color--copied):hover
+      &:after
+        content: 'Copy Hex'
+        background-color: rgba($dark-blue, .35)
+        color: rgba($white, 0.6)
+        font-size: 1.25em
+        cursor: pointer
+    &.key-color--copied
+      .key-color__copiedMessage
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        @include font-heading
+        background-color: transparent
+        color: transparent
+        font-size: 1em
+        text-align: center
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: 300ms ease-in-out
+        background-color: rgba($dark-blue, .35)
+        color: rgba($white, .6)
+        font-size: 1.25em
+        cursor: default
+
+  label
+    @include font-heading
+    font-size: 1em
+    display: block
+    padding: 0.5em 0 0.25em
+    color: $dark-blue
+    &.code
+      @include font-body
+      font-size: .9em
+      font-weight: 500
+      opacity: .5
+      padding: 0
+
+  &.blue .key-color
+    background-color: $blue
+  &.dark-blue .key-color
+    background-color: $dark-blue
+  &.ghost-blue .key-color
+    background-color: $ghost-blue
+  &.gray .key-color
+    background-color: $gray
+  &.dark-gray .key-color
+    background-color: $dark-gray
+  &.mid-blue .key-color
+    background-color: $mid-blue
+
+  &.text-default .key-color
+    background-color: $text-default
+  &.text-mid .key-color
+    background-color: $text-mid
+  &.inactive .key-color
+    background-color: $inactive
+  &.quote .key-color
+    background-color: $quote
+
+  &.delete .key-color
+    background-color: $delete
+  &.light-grey .key-color
+    background-color: $light-grey
+
+  &.green .key-color
+    background-color: $green
+  &.dark-green .key-color
+    background-color: $dark-green
+  &.light-green .key-color
+    background-color: $light-green
+  &.old-green .key-color
+    background-color: $old-green
+
+  &.yellow .key-color
+    background-color: $yellow
+  &.dark-yellow .key-color
+    background-color: $dark-yellow
+  &.light-yellow .key-color
+    background-color: $light-yellow
+
+  &.secondary-blue .key-color
+    background-color: $secondary-blue
+  &.secondary-yellow .key-color
+    background-color: $secondary-yellow
+  &.secondary-green .key-color
+    background-color: $secondary-green
+  &.secondary-red .key-color
+    background-color: $secondary-red
+  &.secondary-orange .key-color
+    background-color: $secondary-orange
+
+  &.modal-yellow .key-color
+    background-color: $modal-yellow
+  &.modal-green .key-color
+    background-color: $modal-green
+  &.modal-blue .key-color
+    background-color: $modal-blue
+
+  &.fb-blue .key-color
+    background-color: $fb-blue
+  &.facebook-blue .key-color
+    background-color: $facebook-blue
+  &.twitter-blue .key-color
+    background-color: $twitter-blue
+  &.instagram-blue .key-color
+    background-color: $instagram-blue
+  &.instagram-purple .key-color
+    background-color: $instagram-purple
+  &.youtube-red .key-color
+    background-color: $youtube-red

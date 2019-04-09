@@ -1,0 +1,33 @@
+// Variables
+@import '_vars/colors'
+@import '_vars/fonts'
+
+// Base
+%transition
+  transition: all 400ms ease
+
+*
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeLegibility
+  text-rendering: geometricPrecision
+  -moz-font-smoothing: antialiased
+
+html, body
+  @include font-body
+  font-size: 16px
+  font-weight: 500
+
+h1, h2, h3, h4, h5, h6
+  @include font-heading
+
+// Atoms
+@import 'atoms/Button/button'
+@import 'atoms/ColorBlock/colorBlock'
+@import 'atoms/ProfilePicture/profilePicture'
+
+// Molecules
+
+// Organisms
+
+// Templates
