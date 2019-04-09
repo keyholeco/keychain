@@ -17,7 +17,7 @@ const colors = [
   [
     { variable: 'light-blue', code: '#C6E1ED' },
     { variable: 'purple', code: '#782C4A' },
-    { variable: 'light-gray', code: '#FFD3D4' },
+    { variable: 'light-pink', code: '#FFD3D4' },
     { variable: 'orange', code: '#FF582C' },
     { variable: 'light-green', code: '#B2D9A6' },
     { variable: 'green', code: '#00B753' },

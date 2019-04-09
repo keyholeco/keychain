@@ -2,7 +2,7 @@
  * TODO: programmatically import and export all modules
  */
 
-import './index.sass'
+import './index.styl'
 
 import Button from './atoms/Button'
 import ColorBlock from './atoms/ColorBlock'

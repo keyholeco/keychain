@@ -1,11 +1,8 @@
 // Variables
-@import '_vars/colors'
-@import '_vars/fonts'
+@import './_vars/_colors.styl'
+@import './_vars/_fonts.styl'
 
 // Base
-%transition
-  transition: all 400ms ease
-
 *
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
@@ -14,17 +11,17 @@
   -moz-font-smoothing: antialiased
 
 html, body
-  @include font-body
+  font-body()
   font-size: 16px
   font-weight: 500
 
 h1, h2, h3, h4, h5, h6
-  @include font-heading
+  font-heading()
 
 // Atoms
-@import 'atoms/Button/button'
-@import 'atoms/ColorBlock/colorBlock'
-@import 'atoms/ProfilePicture/profilePicture'
+@import './atoms/Button/_button.styl'
+@import './atoms/ColorBlock/_colorBlock.styl'
+@import './atoms/ProfilePicture/_profilePicture.styl'
 
 // Molecules
 
