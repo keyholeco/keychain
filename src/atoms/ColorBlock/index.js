@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './_colorBlock.styl'
 
 const ColorBlock = (props) => {
   const [copied, setCopied] = React.useState(false)

@@ -1,8 +1,6 @@
-import { addDecorator, configure, addParameters } from '@storybook/react'
+import { addDecorator, addParameters, configure } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
 import keyholeTheme from './keyholeTheme'
-
-import '../dist/index.css'
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /\.stories\.js$/)
