@@ -9,9 +9,8 @@
   "umd:main": "dist/index.umd.js",
   "module": "dist/index.mjs",
   "scripts": {
-    "start": "npm run watch & npm run watch:styl & npm run storybook & wait",
-    "watch:styl": "onchange 'src/**/*.styl' -- npm run build",
-    "watch": "rm -rf dist && microbundle --jsx React.createElement --watch",
+    "start": "npm run build && npm run watch & npm run storybook & wait",
+    "watch": "onchange 'src/**/*' -- npm run build",
     "build": "rm -rf dist && microbundle build --jsx React.createElement",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
