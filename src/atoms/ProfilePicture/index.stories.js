@@ -23,7 +23,10 @@ storiesOf('Atoms/ProfilePicture', module)
   })
   .add('with url', () => (
     <div style={parentStyles}>
-      <ProfilePicture src="https://randomuser.me/api/portraits/men/1.jpg" style={picStyles} />
+      <ProfilePicture
+        src="https://cdn.keyhole.co/images/about-us-new/team/amar.jpg"
+        style={picStyles}
+      />
       <ProfilePicture
         src="https://cdn.keyhole.co/images/about-us-new/team/hussain.jpg"
         platform="twitter"
