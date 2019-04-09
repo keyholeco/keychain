@@ -25,37 +25,37 @@ storiesOf('Atoms/ProfilePicture', module)
     <div style={parentStyles}>
       <ProfilePicture src="https://randomuser.me/api/portraits/men/1.jpg" style={picStyles} />
       <ProfilePicture
-        src="https://randomuser.me/api/portraits/men/2.jpg"
+        src="https://cdn.keyhole.co/images/about-us-new/team/hussain.jpg"
         platform="twitter"
         style={picStyles}
       />
       <ProfilePicture
-        src="https://randomuser.me/api/portraits/men/3.jpg"
+        src="https://cdn.keyhole.co/images/about-us-new/team/sam.jpg"
         platform="instagram"
         style={picStyles}
       />
       <ProfilePicture
-        src="https://randomuser.me/api/portraits/men/4.jpg"
+        src="https://cdn.keyhole.co/images/about-us-new/team/laura.jpg"
         platform="youtube"
         style={picStyles}
       />
       <ProfilePicture
-        src="https://randomuser.me/api/portraits/men/5.jpg"
+        src="https://cdn.keyhole.co/images/about-us-new/team/joann.jpg"
         platform="facebook"
         style={picStyles}
       />
       <ProfilePicture
-        src="https://randomuser.me/api/portraits/men/6.jpg"
+        src="https://cdn.keyhole.co/user_logos/203518_logo_secondary.png?v=1866382919"
         platform="news"
         style={picStyles}
       />
       <ProfilePicture
-        src="https://randomuser.me/api/portraits/men/7.jpg"
+        src="https://cdn.keyhole.co/user_logos/203518_logo.png?v=764696917"
         platform="blogs"
         style={picStyles}
       />
       <ProfilePicture
-        src="https://randomuser.me/api/portraits/men/8.jpg"
+        src="https://cdn.keyhole.co/images/about-us-new/team/minaz.jpg"
         platform="forums"
         style={picStyles}
       />
