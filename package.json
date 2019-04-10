@@ -39,7 +39,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
-    "microbundle": "https://github.com/superhussain/microbundle/archive/v0.11.3.tar.gz",
+    "microbundle": "https://github.com/superhussain/microbundle/archive/v0.11.2.tar.gz",
     "onchange": "^5.2.0",
     "prettier": "^1.16.4",
     "style-loader": "^0.23.1",
