@@ -9,9 +9,7 @@ module.exports = async ({ config, mode }) => {
   // Make whatever fine-grained changes you need
   config.module.rules.push({
     test: /\.styl$/,
-    loaders: [
-      'style-loader', 'css-loader', 'stylus-loader',
-    ],
+    loaders: ['style-loader', 'css-loader', 'stylus-loader'],
     include: path.resolve(__dirname, '../'),
   }, {
     test: /\.stories\.jsx?$/,

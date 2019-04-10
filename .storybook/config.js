@@ -15,7 +15,7 @@ addParameters({
   }
 })
 
-addDecorator(withInfo)
+addDecorator(withInfo) // info addon must sit on top of other decorators to work properly
 addDecorator(withA11y)
 
 configure(loadStories, module)
