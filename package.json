@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/keyholeco/keychain#readme",
   "scripts": {
-    "start": "npm run build && npm run watch & npm run storybook & wait",
-    "watch": "onchange 'src/**/*' -- npm run build",
-    "build": "rm -rf dist && microbundle build --jsx React.createElement",
+    "start": "npm run watch & npm run storybook & wait",
+    "watch": "microbundle --jsx React.createElement --injectStyles true --watch",
+    "build": "rm -rf dist && microbundle build --jsx React.createElement --injectStyles true",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
@@ -39,7 +39,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
-    "microbundle": "^0.11.0",
+    "microbundle": "https://github.com/superhussain/microbundle/archive/v0.11.3.tar.gz",
     "onchange": "^5.2.0",
     "prettier": "^1.16.4",
     "style-loader": "^0.23.1",
