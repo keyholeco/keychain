@@ -1,4 +1,5 @@
 import { addDecorator, addParameters, configure } from '@storybook/react'
+import { withInfo } from '@storybook/addon-info'
 import { withA11y } from '@storybook/addon-a11y'
 import keyholeTheme from './keyholeTheme'
 
@@ -14,7 +15,7 @@ addParameters({
   }
 })
 
-// a11y
+addDecorator(withInfo)
 addDecorator(withA11y)
 
 configure(loadStories, module)
