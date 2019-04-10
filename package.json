@@ -22,7 +22,11 @@
     "build": "rm -rf dist && microbundle build --jsx React.createElement --injectStyles true",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "release:patch": "npm version patch && git push && git push --tags && npm run deploy-storybook && npm publish",
+    "release:minor": "npm version minor && git push && git push --tags && npm run deploy-storybook && npm publish",
+    "release:major": "npm version major && git push && git push --tags && npm run deploy-storybook && npm publish",
+    "release": "npm run release:patch"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
