@@ -13,12 +13,11 @@ function loadStories() {
 addParameters({
   options: {
     theme: keyholeTheme,
-  }
+  },
+  ...keyholeViewports
 })
 
 addDecorator(withInfo) // info addon must sit on top of other decorators to work properly
 addDecorator(withA11y)
-
-addParameters(keyholeViewports)
 
 configure(loadStories, module)
