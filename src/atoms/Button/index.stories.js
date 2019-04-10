@@ -5,25 +5,24 @@ import { action } from '@storybook/addon-actions'
 import Button, { buttonSizes, buttonColors } from './index'
 import { ucFirst } from '../../utils'
 
-const parentStyles = { display: 'flex', alignItems: 'center', flexWrap: 'wrap' }
 const elStyles = { margin: '.25em' }
 
 storiesOf('Atoms/Button', module)
   .add('basic', () => {
     return (
-      <div style={parentStyles}>
+      <React.Fragment>
         <Button onClick={action('button-click')} style={elStyles}>
           Default Button
         </Button>
         <Button onClick={action('button-click')} style={elStyles} href="#">
           Button Link
         </Button>
-      </div>
+      </React.Fragment>
     )
   })
   .add('sizes', () => {
     return (
-      <div style={parentStyles}>
+      <React.Fragment>
         {[...buttonSizes].reverse().map((size) => (
           <Button
             key={`button-${size}`}
@@ -34,12 +33,12 @@ storiesOf('Atoms/Button', module)
             {ucFirst(size)} Button
           </Button>
         ))}
-      </div>
+      </React.Fragment>
     )
   })
   .add('colors', () => {
     return (
-      <div style={parentStyles}>
+      <React.Fragment>
         {buttonColors.map((color) => (
           <Button
             key={`button-${color}`}
@@ -50,60 +49,48 @@ storiesOf('Atoms/Button', module)
             {ucFirst(color)} Button
           </Button>
         ))}
-      </div>
+      </React.Fragment>
     )
   })
   .add('plain', () => {
     return (
-      <div style={parentStyles}>
-        <Button onClick={action('button-click')} style={elStyles} plain>
-          Plain Button
-        </Button>
-      </div>
+      <Button onClick={action('button-click')} plain>
+        Plain Button
+      </Button>
     )
   })
   .add('rounded', () => {
     return (
-      <div style={parentStyles}>
-        <Button onClick={action('button-click')} style={elStyles} rounded>
-          Rounded Button
-        </Button>
-      </div>
+      <Button onClick={action('button-click')} rounded>
+        Rounded Button
+      </Button>
     )
   })
   .add('disabled', () => {
     return (
-      <div style={parentStyles}>
-        <Button onClick={action('button-click')} style={elStyles} disabled>
-          Disabled Button
-        </Button>
-      </div>
+      <Button onClick={action('button-click')} disabled>
+        Disabled Button
+      </Button>
     )
   })
   .add('straight', () => {
     return (
-      <div style={parentStyles}>
-        <Button onClick={action('button-click')} style={elStyles} straight>
-          Straight Button
-        </Button>
-      </div>
+      <Button onClick={action('button-click')} straight>
+        Straight Button
+      </Button>
     )
   })
   .add('outline', () => {
     return (
-      <div style={parentStyles}>
-        <Button onClick={action('button-click')} style={elStyles} color="primary" outline>
-          Outline Button
-        </Button>
-      </div>
+      <Button onClick={action('button-click')} color="primary" outline>
+        Outline Button
+      </Button>
     )
   })
   .add('caps', () => {
     return (
-      <div style={parentStyles}>
-        <Button onClick={action('button-click')} style={elStyles} caps>
-          Caps Button
-        </Button>
-      </div>
+      <Button onClick={action('button-click')} caps>
+        Caps Button
+      </Button>
     )
   })
