@@ -1,0 +1,24 @@
+@import '../../_styl/vars/*.styl'
+
+.kc-headerLogoLink, .kc-headerLogo
+  display: inline-block
+.kc-headerLogoLink
+  display: flex
+  align-items: center
+  transition: 300ms ease-in-out
+  &:hover
+    .kc-svg-keyholeLogoSolid__icon
+      fill: $white
+      transform: rotate(-90deg)
+.kc-headerLogo
+  height: 32px
+  display: flex
+  align-items: center
+  transform: translateY(-2px)
+  transition: 300ms ease-in-out
+.kc-svg-keyholeLogoSolid
+  height: 26px
+.kc-svg-keyholeLogoSolid__icon
+  transition: 300ms ease-out
+  transform: none
+  transform-origin: 919.6px 124px
