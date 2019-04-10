@@ -38,12 +38,12 @@ const ColorBlock = (props) => {
   }
 
   return (
-    <div className={`key-colorBlock key-colorBlock--${props.variable}`} onClick={copyColorCode}>
+    <div className={`kc-colorBlock kc-colorBlock--${props.variable}`} onClick={copyColorCode}>
       <div
-        className={`key-color ${copied ? 'key-color--copied' : ''}`}
+        className={`kc-color ${copied ? 'kc-color--copied' : ''}`}
         style={{ backgroundColor: props.color }}
       >
-        {copied ? <span className="key-color__copiedMessage">Copied!</span> : null}
+        {copied ? <span className="kc-color__copiedMessage">Copied!</span> : null}
       </div>
       <label className="variable">${props.variable}</label>
       <label className="code">{props.color}</label>

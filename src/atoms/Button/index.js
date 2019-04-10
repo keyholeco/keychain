@@ -17,15 +17,15 @@ export const buttonColors = [
 
 export const Button = (props) => {
   const classNames = `
-    key-button
-    ${props.plain ? 'key-button--plain' : ''}
-    ${props.rounded ? 'key-button--rounded' : ''}
-    ${props.disabled ? 'key-button--disabled' : ''}
-    ${props.straight ? 'key-button--straight' : ''}
-    ${props.outline ? 'key-button--outline' : ''}
-    ${props.caps ? 'key-button--caps' : ''}
-    ${props.size ? `key-button--${props.size}` : ''}
-    ${props.color ? `key-button--${props.color}` : ''}
+    kc-button
+    ${props.plain ? 'kc-button--plain' : ''}
+    ${props.rounded ? 'kc-button--rounded' : ''}
+    ${props.disabled ? 'kc-button--disabled' : ''}
+    ${props.straight ? 'kc-button--straight' : ''}
+    ${props.outline ? 'kc-button--outline' : ''}
+    ${props.caps ? 'kc-button--caps' : ''}
+    ${props.size ? `kc-button--${props.size}` : ''}
+    ${props.color ? `kc-button--${props.color}` : ''}
     ${props.className || ''}
   `
 

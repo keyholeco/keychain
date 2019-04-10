@@ -7,8 +7,8 @@ const ProfilePicture = (props) => {
   return (
     <div
       style={props.style}
-      className={`key-profilePicture key-profilePicture--${props.platform || 'noPlatform'} ${
-        errored ? 'key-profilePicture--error' : ''
+      className={`kc-profilePicture kc-profilePicture--${props.platform || 'noPlatform'} ${
+        errored ? 'kc-profilePicture--error' : ''
       } ${props.className || ''}`}
     >
       <img

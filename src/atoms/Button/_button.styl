@@ -1,8 +1,9 @@
 @import '../../_styl/vars/*.styl'
 
-.key-button
+.kc-button
   font-body()
   display: inline-block
+  text-align: center
   cursor: pointer
   font-size: 1em
   appearance: none
@@ -18,7 +19,7 @@
     border-color: $blue
     color: $blue
 
-.key-button--default
+.kc-button--default
   background-color: $white
   border-color: $light-pink
   color: $dark-blue
@@ -26,7 +27,7 @@
     border-color: $orange
     color: $orange
 
-.key-button--primary
+.kc-button--primary
   background-color: $orange
   border-color: $orange
   color: $white
@@ -35,7 +36,7 @@
     border-color: darken($orange, 5%)
     color: $white
 
-.key-button--instagram
+.kc-button--instagram
   background-color: $instagram-purple
   border-color: $instagram-purple
   color: $white
@@ -44,7 +45,7 @@
     border-color: darken($instagram-purple, 5%)
     color: $white
 
-.key-button--blue
+.kc-button--blue
   background-color: $blue
   border-color: $blue
   color: $white
@@ -53,7 +54,7 @@
     border-color: darken($blue, 5%)
     color: $white
 
-.key-button--ghostBlue
+.kc-button--ghostBlue
   background-color: $ghost-blue
   border-color: $ghost-blue
   color: $white
@@ -62,7 +63,7 @@
     border-color: darken($ghost-blue, 5%)
     color: $white
 
-.key-button--green
+.kc-button--green
   background-color: $green
   border-color: $green
   color: $white
@@ -71,7 +72,7 @@
     border-color: darken($green, 5%)
     color: $white
 
-.key-button--red
+.kc-button--red
   background-color: $secondary-red
   border-color: $secondary-red
   color: $white
@@ -80,7 +81,7 @@
     border-color: darken($secondary-red, 5%)
     color: $white
 
-.key-button--yellow
+.kc-button--yellow
   background-color: $yellow
   border-color: $yellow
   color: $dark-blue
@@ -89,7 +90,7 @@
     border-color: darken($yellow, 10%)
     color: $dark-blue
 
-.key-button--darkBlue
+.kc-button--darkBlue
   background-color: $dark-blue
   border-color: $dark-blue
   color: $white
@@ -98,7 +99,7 @@
     border-color: darken($dark-blue, 5%)
     color: $white
 
-.key-button--orange
+.kc-button--orange
   background-color: $orange
   border-color: $orange
   color: $white
@@ -107,7 +108,7 @@
     border-color: darken($orange, 5%)
     color: $white
 
-.key-button--gray
+.kc-button--gray
   background-color: $gray
   border-color: $gray
   color: darken($gray, 30%)
@@ -116,44 +117,44 @@
     border-color: darken($gray, 5%)
     color: darken($gray, 30%)
 
-.key-button--outline
+.kc-button--outline
   background-color: $white
   border: 2px solid
   color: unset
-  &.key-button--primary
+  &.kc-button--primary
     color: $orange
-  &.key-button--blue
+  &.kc-button--blue
     color: $blue
-  &.key-button--green
+  &.kc-button--green
     color: $green
-  &.key-button--red
+  &.kc-button--red
     color: $secondary-red
-  &.key-button--yellow
+  &.kc-button--yellow
     color: $yellow
-  &.key-button--darkBlue
+  &.kc-button--darkBlue
     color: $dark-blue
-  &.key-button--orange
+  &.kc-button--orange
     color: $orange
   &:hover, &:focus
     color: $white
 
-.key-button--big, .key-button--sizeBig
+.kc-button--big, .kc-button--sizeBig
   font-size: 1.3em
 
-.key-button--small, .key-button--sizeSmall
+.kc-button--small, .kc-button--sizeSmall
   font-size: 0.875em
   padding: 0.5em 0.75em
 
-.key-button--rounded
+.kc-button--rounded
   border-radius: 10em
 
-.key-button--straight
+.kc-button--straight
   border-radius: 0
 
-.key-button--noBorder
+.kc-button--noBorder
   border: none
 
-.key-button--noFill
+.kc-button--noFill
   background-color: transparent
   color: #ccc
   padding: 0.35em 0.5em
@@ -161,16 +162,16 @@
     background-color: transparent
     color: $dark-blue
 
-.key-button--caps
+.kc-button--caps
   text-transform: uppercase
 
-.key-button--disabled, .key-button[disabled], .key-button--disabled[disabled]
+.kc-button--disabled, .kc-button[disabled], .kc-button--disabled[disabled]
   color: #aaa
   border-color: #ccc
   background-color: #ccc
   cursor: not-allowed
 
-.key-button--plain
+.kc-button--plain
   background-color: transparent
   border: none
   padding: 0

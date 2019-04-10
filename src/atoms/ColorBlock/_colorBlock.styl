@@ -1,18 +1,18 @@
 @import '../../_styl/vars/*.styl'
 
-.key-colorBlocks
+.kc-colorBlocks
   display: flex
   flex-wrap: wrap
   justify-content: flex-start
   align-items: flex-start
   padding: 1.5em 0
-.key-colorBlock
+.kc-colorBlock
   display: inline-flex
   text-align: center
   flex-direction: column
   justify-content: center
   align-items: flex-start
-  .key-color
+  .kc-color
     position: relative
     display: inline-block
     width: 150px
@@ -35,15 +35,15 @@
       justify-content: center
       align-items: center
       transition: 300ms ease-in-out
-    &:not(.key-color--copied):hover
+    &:not(.kc-color--copied):hover
       &:after
         content: 'Copy Hex'
         background-color: rgba($dark-blue, .35)
         color: rgba($white, 0.6)
         font-size: 1.25em
         cursor: pointer
-    &.key-color--copied
-      .key-color__copiedMessage
+    &.kc-color--copied
+      .kc-color__copiedMessage
         position: absolute
         top: 0
         right: 0
@@ -76,76 +76,76 @@
       opacity: .5
       padding: 0
 
-  &.blue .key-color
+  &.blue .kc-color
     background-color: $blue
-  &.dark-blue .key-color
+  &.dark-blue .kc-color
     background-color: $dark-blue
-  &.ghost-blue .key-color
+  &.ghost-blue .kc-color
     background-color: $ghost-blue
-  &.gray .key-color
+  &.gray .kc-color
     background-color: $gray
-  &.dark-gray .key-color
+  &.dark-gray .kc-color
     background-color: $dark-gray
-  &.mid-blue .key-color
+  &.mid-blue .kc-color
     background-color: $mid-blue
 
-  &.text-default .key-color
+  &.text-default .kc-color
     background-color: $text-default
-  &.text-mid .key-color
+  &.text-mid .kc-color
     background-color: $text-mid
-  &.inactive .key-color
+  &.inactive .kc-color
     background-color: $inactive
-  &.quote .key-color
+  &.quote .kc-color
     background-color: $quote
 
-  &.delete .key-color
+  &.delete .kc-color
     background-color: $delete
-  &.light-grey .key-color
+  &.light-grey .kc-color
     background-color: $light-grey
 
-  &.green .key-color
+  &.green .kc-color
     background-color: $green
-  &.dark-green .key-color
+  &.dark-green .kc-color
     background-color: $dark-green
-  &.light-green .key-color
+  &.light-green .kc-color
     background-color: $light-green
-  &.old-green .key-color
+  &.old-green .kc-color
     background-color: $old-green
 
-  &.yellow .key-color
+  &.yellow .kc-color
     background-color: $yellow
-  &.dark-yellow .key-color
+  &.dark-yellow .kc-color
     background-color: $dark-yellow
-  &.light-yellow .key-color
+  &.light-yellow .kc-color
     background-color: $light-yellow
 
-  &.secondary-blue .key-color
+  &.secondary-blue .kc-color
     background-color: $secondary-blue
-  &.secondary-yellow .key-color
+  &.secondary-yellow .kc-color
     background-color: $secondary-yellow
-  &.secondary-green .key-color
+  &.secondary-green .kc-color
     background-color: $secondary-green
-  &.secondary-red .key-color
+  &.secondary-red .kc-color
     background-color: $secondary-red
-  &.secondary-orange .key-color
+  &.secondary-orange .kc-color
     background-color: $secondary-orange
 
-  &.modal-yellow .key-color
+  &.modal-yellow .kc-color
     background-color: $modal-yellow
-  &.modal-green .key-color
+  &.modal-green .kc-color
     background-color: $modal-green
-  &.modal-blue .key-color
+  &.modal-blue .kc-color
     background-color: $modal-blue
 
-  &.fb-blue .key-color
+  &.fb-blue .kc-color
     background-color: $fb-blue
-  &.facebook-blue .key-color
+  &.facebook-blue .kc-color
     background-color: $facebook-blue
-  &.twitter-blue .key-color
+  &.twitter-blue .kc-color
     background-color: $twitter-blue
-  &.instagram-blue .key-color
+  &.instagram-blue .kc-color
     background-color: $instagram-blue
-  &.instagram-purple .key-color
+  &.instagram-purple .kc-color
     background-color: $instagram-purple
-  &.youtube-red .key-color
+  &.youtube-red .kc-color
     background-color: $youtube-red

@@ -9,7 +9,7 @@ storiesOf('Atoms/ColorBlock', module).add('colors', () => {
     <React.Fragment>
       {colors.map((row, index) => {
         return (
-          <div key={`colorrow-${index}`} className="key-colorBlocks">
+          <div key={`colorrow-${index}`} className="kc-colorBlocks">
             {row.map((color) => (
               <ColorBlock
                 key={`colorblock-${color.code}`}
