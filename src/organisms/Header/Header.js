@@ -2,37 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './_header.styl'
 
-import { getDocumentHeight, getScrollPosition } from '../../utils'
+import { lightOrDark } from '../../utils'
 
 export const Header = (props) => {
-  const [scrolled, setScrolled] = React.useState(false)
-
-  React.useEffect(() => {
-    setScrolled(false)
-  }, [props.page, props.hash])
-
-  React.useEffect(() => {
-    document.addEventListener('scroll', headerScroll)
-    return () => {
-      document.removeEventListener('scroll', headerScroll)
-    }
-  })
-
-  const headerScroll = () => {
-    const pageHeight = getDocumentHeight()
-    let currentSpot = getScrollPosition()
-    if (currentSpot > pageHeight) currentSpot = 0
-    setScrolled(currentSpot > props.scrollOffset)
+  const styles = { ...props.style }
+  if (props.backgroundColor && props.backgroundColor !== styles.backgroundColor) {
+    styles.backgroundColor = props.backgroundColor
+    styles.color = lightOrDark(props.backgroundColor) === 'dark' ? '#fff' : '#26293C'
   }
 
   return (
-    <header
-      className={`
-        kc-header
-        ${scrolled ? 'kc-header--scrolled' : ''}
-        ${props.className || ''}
-      `}
-    >
+    <header className={`kc-header ${props.className || ''}`} style={styles}>
       {props.children}
     </header>
   )
@@ -42,12 +22,12 @@ Header.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
-  scrollOffset: PropTypes.number,
+  backgroundColor: PropTypes.string,
 }
 
 Header.defaultProps = {
   style: {},
-  scrollOffset: 32,
+  backgroundColor: '#FFD433',
 }
 
 export default Header

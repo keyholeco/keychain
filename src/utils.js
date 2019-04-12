@@ -9,15 +9,37 @@ export const pad = (nVal, width, zVal) => {
   return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n
 }
 
-export const getDocumentHeight = () =>
-  Math.max(
-    document.body.scrollHeight,
-    document.documentElement.scrollHeight,
-    document.body.offsetHeight,
-    document.documentElement.offsetHeight,
-    document.body.clientHeight,
-    document.documentElement.clientHeight
-  )
+export const lightOrDark = (x) => {
+  // Variables for red, green, blue values
+  let color = x
+  let r
+  let g
+  let b
 
-export const getScrollPosition = () =>
-  Math.max(window.pageYOffset, document.body.scrollTop, document.documentElement.scrollTop, 0)
+  // Check the format of the color, HEX or RGB?
+  if (color.match(/^rgb/)) {
+    // If HEX --> store the red, green, blue values in separate variables
+    color = color.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/)
+
+    r = color[1]
+    g = color[2]
+    b = color[3]
+  } else {
+    // If RGB --> Convert it to HEX: http://gist.github.com/983661
+    color = +`0x${color.slice(1).replace(color.length < 5 && /./g, '$&$&')}`
+
+    r = color >> 16
+    g = (color >> 8) & 255
+    b = color & 255
+  }
+
+  // HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html
+  const hsp = Math.sqrt(0.299 * (r * r) + 0.587 * (g * g) + 0.114 * (b * b))
+
+  // Using the HSP value, determine whether the color is light or dark
+  if (hsp > 127.5) {
+    return 'light'
+  }
+
+  return 'dark'
+}

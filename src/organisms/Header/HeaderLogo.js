@@ -5,7 +5,7 @@ import KeyholeLogo from './KeyholeLogo'
 import './_headerLogo.styl'
 
 export const HeaderLogo = (props) => {
-  if (props.type === 'custom') {
+  if (props.theme === 'custom') {
     if (props.href && props.src) {
       return (
         <a
@@ -53,7 +53,6 @@ export const HeaderLogo = (props) => {
     )
   }
 
-  if (props.type !== 'custom' && !props.style.width) props.style.width = '150px'
   return (
     <a
       href={props.href || '/?home_force=true'}
@@ -74,7 +73,7 @@ HeaderLogo.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-  type: PropTypes.oneOf(['keyhole', 'custom']),
+  theme: PropTypes.oneOf(['keyhole', 'custom']),
   href: PropTypes.string,
   src: PropTypes.string,
   onClick: PropTypes.func,
@@ -82,7 +81,7 @@ HeaderLogo.propTypes = {
 
 HeaderLogo.defaultProps = {
   style: {},
-  type: 'keyhole',
+  theme: 'keyhole',
 }
 
 export default HeaderLogo
