@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import Header from './index'
+import { H2 } from '../../atoms/Type'
 
 storiesOf('Organisms/Header.Logo', module)
   .add('basic', () => {
@@ -15,7 +16,7 @@ storiesOf('Organisms/Header.Logo', module)
     return (
       <Header>
         <Header.Logo theme="custom">
-          <h1>Custom Text</h1>
+          <H2>Custom Text</H2>
         </Header.Logo>
       </Header>
     )
@@ -37,7 +38,7 @@ storiesOf('Organisms/Header.Logo', module)
           theme="custom"
           src="https://cdn.keyhole.co/user_logos/37_logo.png?v=1442235000"
         >
-          <h1>&nbsp; testing</h1>
+          <H2>&nbsp; testing</H2>
         </Header.Logo>
       </Header>
     )

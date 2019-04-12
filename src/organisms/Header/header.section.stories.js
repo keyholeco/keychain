@@ -2,13 +2,16 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import Header from './index'
+import Type from '../../atoms/Type'
 
 storiesOf('Organisms/Header.Section', module)
   .add('basic', () => {
     return (
       <Header>
         <Header.Logo />
-        <Header.Section>Here is another section on the header</Header.Section>
+        <Header.Section>
+          <Type>Here is another section on the header</Type>
+        </Header.Section>
       </Header>
     )
   })
@@ -16,7 +19,9 @@ storiesOf('Organisms/Header.Section', module)
     return (
       <Header>
         <Header.Logo />
-        <Header.Section align="right">Here is another section on the header</Header.Section>
+        <Header.Section align="right">
+          <Type>Here is another section on the header</Type>
+        </Header.Section>
       </Header>
     )
   })
@@ -25,7 +30,7 @@ storiesOf('Organisms/Header.Section', module)
       <Header>
         <Header.Logo />
         <Header.Section align="center" verticalAlign="middle">
-          Here is another section on the header
+          <Type>Here is another section on the header</Type>
         </Header.Section>
       </Header>
     )
