@@ -1,0 +1,68 @@
+@import '../../_styl/vars/*.styl'
+
+:root
+  /* set base values */
+  --type-base-size: 1em
+  --type-scale-ratio: 1.2
+
+  /* type scale */
+  --type-xs: calc(var(--type-base-size) / (var(--type-scale-ratio) * var(--type-scale-ratio)))
+  --type-sm: calc(var(--type-base-size) / var(--type-scale-ratio))
+  --type-md: calc(var(--type-base-size) * var(--type-scale-ratio))
+  --type-lg: calc(var(--type-base-size) * var(--type-scale-ratio) * var(--type-scale-ratio))
+  --type-xl: calc(var(--type-base-size) * var(--type-scale-ratio) * var(--type-scale-ratio) * var(--type-scale-ratio))
+  --type-xxl: calc(var(--type-base-size) * var(--type-scale-ratio) * var(--type-scale-ratio) * var(--type-scale-ratio) * var(--type-scale-ratio))
+  --type-xxxl: calc(var(--type-base-size) * var(--type-scale-ratio) * var(--type-scale-ratio) * var(--type-scale-ratio) * var(--type-scale-ratio) * var(--type-scale-ratio))
+
+  /* line-height */
+  --heading-line-height: 1.2
+  --body-line-height: 1.4
+
+.kc-type
+  font-body()
+  color: lighten($dark-blue, 5)
+  line-height: var(--body-line-height)
+.kc-type--bold
+  font-weight: 700
+.kc-type--italics
+  font-style: italic
+.kc-type--light
+  font-weight: 300
+
+.kc-type--h1,
+.kc-type--h2,
+.kc-type--h3,
+.kc-type--h4,
+.kc-type--xxxl,
+.kc-type--xxl,
+.kc-type--xl,
+.kc-type--lg,
+.kc-type--md,
+.kc-type--heading
+  font-heading()
+  color: $dark-blue
+  line-height: var(--heading-line-height)
+
+.kc-type--sm,
+.kc-type--xs
+  font-body()
+  color: lighten($dark-blue, 5)
+  line-height: var(--body-line-height)
+
+.kc-type--xxxl
+  font-size: var(--type-xxxl)
+.kc-type--h1, .kc-type--xxl
+  font-size: var(--type-xxl)
+.kc-type--h2, .kc-type--xl
+  font-size: var(--type-xl)
+.kc-type--h3, .kc-type--lg
+  font-size: var(--type-lg)
+.kc-type--h4, .kc-type--md
+  font-size: var(--type-md)
+.kc-type--sm
+  font-size: var(--type-sm)
+.kc-type--xs
+  font-size: var(--type-xs)
+
+
+

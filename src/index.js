@@ -6,6 +6,7 @@
 import Button from './atoms/Button'
 import ColorBlock from './atoms/ColorBlock'
 import ProfilePicture from './atoms/ProfilePicture'
+import Type, { H1, H2, H3, H4 } from './atoms/Type'
 
 // Molecules
 
@@ -20,6 +21,11 @@ import Header from './organisms/Header'
 export { Button }
 export { ColorBlock }
 export { ProfilePicture }
+export { Type }
+export { H1 }
+export { H2 }
+export { H3 }
+export { H4 }
 
 // Molecules
 
@@ -35,6 +41,11 @@ export default {
   Button,
   ColorBlock,
   ProfilePicture,
+  Type,
+  H1,
+  H2,
+  H3,
+  H4,
 
   // Molecules
 
