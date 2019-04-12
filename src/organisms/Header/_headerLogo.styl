@@ -2,9 +2,12 @@
 
 .kc-headerLogoLink, .kc-headerLogo
   display: inline-block
+  margin-left: 1em
+  align-self: center
 .kc-headerLogoLink
   display: flex
   align-items: center
+  max-width: 150px
   transition: 300ms ease-in-out
   &:hover
     .kc-svg-keyholeLogoSolid__icon
@@ -13,11 +16,18 @@
     .kc-svg-keyholeLogoNew__icon
       fill: $white
       transform: rotate(-90deg)
+  .kc-headerLogo
+    max-width: unset
+    margin-left: 0
 .kc-headerLogo
   height: 40px
   display: flex
   align-items: center
   transition: 300ms ease-in-out
+.kc-headerLogo__image
+  height: 100%
+  object-fit: contain
+  object-position: center
 .kc-svg-keyholeLogoSolid
   height: 26px
 .kc-svg-keyholeLogoSolid__icon

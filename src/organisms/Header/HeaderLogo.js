@@ -17,7 +17,7 @@ export const HeaderLogo = (props) => {
           style={props.style}
           onClick={props.onClick}
         >
-          <img src={props.src} className="kc-headerLogo" />
+          <img src={props.src} className="kc-headerLogo__image" />
           {props.children || null}
         </a>
       )
@@ -33,7 +33,7 @@ export const HeaderLogo = (props) => {
           style={props.style}
           onClick={props.onClick}
         >
-          <img src={props.src} className="kc-headerLogo" />
+          <img src={props.src} className="kc-headerLogo__image" />
           {props.children || null}
         </div>
       )
