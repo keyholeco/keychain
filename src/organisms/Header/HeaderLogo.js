@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import KeyholeLogo from './KeyholeLogo'
-import './_headerLogo.styl'
+import './headerLogo.styl'
 
 export const HeaderLogo = (props) => {
   if (props.theme === 'custom') {

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './_button.styl'
+import './button.styl'
 
 export const buttonSizes = ['small', 'medium', 'big']
 export const buttonColors = [

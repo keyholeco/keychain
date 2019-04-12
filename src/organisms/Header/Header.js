@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './_header.styl'
+import './header.styl'
 
 import { lightOrDark } from '../../utils'
 
