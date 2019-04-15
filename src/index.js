@@ -6,6 +6,7 @@
 import ColorBlock from './atoms/ColorBlock'
 import Icon from './atoms/Icon'
 import Type, { H1, H2, H3, H4 } from './atoms/Type'
+import KeyholeLogo from './atoms/KeyholeLogo'
 
 // Molecules
 import Button from './molecules/Button'
@@ -26,6 +27,7 @@ export { H1 }
 export { H2 }
 export { H3 }
 export { H4 }
+export { KeyholeLogo }
 
 // Molecules
 export { Button }
@@ -47,6 +49,7 @@ export default {
   H2,
   H3,
   H4,
+  KeyholeLogo,
 
   // Molecules
   Button,
