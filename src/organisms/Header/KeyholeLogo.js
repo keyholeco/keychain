@@ -5,9 +5,14 @@ export const KeyholeLogo = (props) => {
   let foregroundFill = '#26293C'
   let backgroundFill = '#ffd433'
 
-  if (props.theme === 'dark') {
-    foregroundFill = '#ffd433'
-    backgroundFill = '#26293C'
+  switch (props.theme) {
+    case 'dark': {
+      foregroundFill = '#ffd433'
+      backgroundFill = '#26293C'
+      break
+    }
+    default:
+      break
   }
 
   return (
@@ -90,7 +95,7 @@ export const KeyholeLogo = (props) => {
 KeyholeLogo.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
-  theme: PropTypes.oneOf(['default', 'dark']),
+  theme: PropTypes.oneOf(['default', 'keyhole', 'dark', 'custom']),
 }
 
 KeyholeLogo.defaultProps = {
