@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Icon from './index'
-import { H1 } from '../../../dist'
+import Icon, { iconSizes } from './index'
+import { Type, H1 } from '../../../dist'
 
 const parentStyles = { color: '#26293C' }
 const iconStyles = { margin: '0.25em' }
@@ -35,6 +35,29 @@ storiesOf('Atoms/Icon', module)
       <div>
         <span style={labelStyles}>Light:</span>
         <Icon icon="users" type="light" style={iconStyles} />
+      </div>
+    </H1>
+  ))
+  .add('sizes', () => (
+    <Type style={parentStyles}>
+      {[...iconSizes].reverse().map((size) => (
+        <div key={`icon-size-${size}`}>
+          <span style={labelStyles}>{size}:</span>
+          <Icon icon="users" size={size} style={iconStyles} />
+        </div>
+      ))}
+    </Type>
+  ))
+  .add('fixed width', () => (
+    <H1 style={parentStyles}>
+      <div>
+        <Icon icon="users" type="solid" style={iconStyles} fixed />
+      </div>
+      <div>
+        <Icon icon="users" type="regular" style={iconStyles} fixed />
+      </div>
+      <div>
+        <Icon icon="users" type="light" style={iconStyles} fixed />
       </div>
     </H1>
   ))
