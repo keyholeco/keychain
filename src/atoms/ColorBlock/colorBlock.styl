@@ -12,69 +12,37 @@
   flex-direction: column
   justify-content: center
   align-items: flex-start
+  cursor: pointer
   .kc-color
     position: relative
-    display: inline-block
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     width: 150px
     height: 80px
     background-color: #eee
-    box-shadow: inset 0 0 0 5px rgba($dark-blue, .1)
-    &:after
-      content: ''
-      position: absolute
-      top: 0
-      right: 0
-      bottom: 0
-      left: 0
-      font-heading()
-      background-color: transparent
-      color: transparent
-      font-size: 1em
-      text-align: center
-      display: flex
-      justify-content: center
-      align-items: center
-      transition: 300ms ease-in-out
-    &:not(.kc-color--copied):hover
-      &:after
-        content: 'Copy Hex'
-        background-color: rgba($dark-blue, .35)
-        color: rgba($white, 0.6)
-        font-size: 1.25em
-        cursor: pointer
-    &.kc-color--copied
-      .kc-color__copiedMessage
-        position: absolute
-        top: 0
-        right: 0
-        bottom: 0
-        left: 0
-        font-heading()
-        background-color: transparent
-        color: transparent
-        font-size: 1em
-        text-align: center
-        display: flex
-        justify-content: center
-        align-items: center
-        transition: 300ms ease-in-out
-        background-color: rgba($dark-blue, .35)
-        color: rgba($white, .6)
-        font-size: 1.25em
-        cursor: default
+    margin: 0 .5em
+    border-radius: 4px
+    box-shadow: 0 0 .5em rgba($dark-blue, .2)
+    color: $dark-blue
+    transition: 300ms ease-in-out
+    &:hover
+      box-shadow: 0 0 .75em rgba($dark-blue, .5)
+      transform: scale(1.05)
 
-  label
+  .kc-color__variable
     font-heading()
     font-size: 1em
     display: block
-    padding: 0.5em 0 0.25em
-    color: $dark-blue
-    &.code
-      font-body()
-      font-size: .9em
-      font-weight: 500
-      opacity: .5
-      padding: 0
+    padding-bottom: .25em
+
+  .kc-color__code
+    font-body()
+    font-size: .9em
+    font-weight: 500
+    opacity: .5
+    padding: 0
 
   &.blue .kc-color
     background-color: $blue

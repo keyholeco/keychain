@@ -2,51 +2,61 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './colorBlock.styl'
 
+import { lightOrDark } from '../../utils'
+
 const ColorBlock = (props) => {
   const [copied, setCopied] = React.useState(false)
 
   const copyColorCode = (e) => {
-    setCopied(true)
+    const colorCode = e.target.closest('.kc-colorBlock').dataset.color
 
-    const colorCode = e.target.nextElementSibling.nextElementSibling.innerText
-    const input = document.createElement('input')
+    if (colorCode) {
+      setCopied(true)
 
-    input.setAttribute('id', 'color_code')
-    input.setAttribute('class', 'hide')
-    input.setAttribute('type', 'text')
-    input.setAttribute('name', 'color_code')
-    input.setAttribute('value', colorCode)
-    document.body.appendChild(input)
+      const input = document.createElement('input')
+      input.setAttribute('id', 'color_code')
+      input.setAttribute('class', 'hide')
+      input.setAttribute('type', 'text')
+      input.setAttribute('name', 'color_code')
+      input.setAttribute('value', colorCode)
+      document.body.appendChild(input)
 
-    if (input && input.select) {
-      input.select()
+      if (input && input.select) {
+        input.select()
 
-      try {
-        document.execCommand('copy')
-        input.blur()
-        input.parentNode.removeChild(input)
+        try {
+          document.execCommand('copy')
+          input.blur()
+          input.parentNode.removeChild(input)
 
-        console.log(`Copied color: ${colorCode}`)
+          console.log(`Copied color: ${colorCode}`)
 
-        setTimeout(() => {
-          setCopied(false)
-        }, 3000)
-      } catch (err) {
-        console.log(`Browser doesn't support copy!`)
+          setTimeout(() => {
+            setCopied(false)
+          }, 3000)
+        } catch (err) {
+          console.log(`Browser doesn't support copy!`)
+        }
       }
     }
   }
 
   return (
-    <div className={`kc-colorBlock kc-colorBlock--${props.variable}`} onClick={copyColorCode}>
+    <div
+      className={`kc-colorBlock kc-colorBlock--${props.variable}`}
+      data-color={props.color}
+      onClick={copyColorCode}
+    >
       <div
         className={`kc-color ${copied ? 'kc-color--copied' : ''}`}
-        style={{ backgroundColor: props.color }}
+        style={{
+          backgroundColor: props.color,
+          color: lightOrDark(props.color) === 'dark' ? '#fff' : '#26293C',
+        }}
       >
-        {copied ? <span className="kc-color__copiedMessage">Copied!</span> : null}
+        <span className="kc-color__variable">${props.variable}</span>
+        <span className="kc-color__code">{copied ? 'Copied Hex Code!' : props.color}</span>
       </div>
-      <label className="variable">${props.variable}</label>
-      <label className="code">{props.color}</label>
     </div>
   )
 }
