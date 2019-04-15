@@ -7,7 +7,7 @@ import { ucFirst } from '../../utils'
 
 const elStyles = { margin: '.25em' }
 
-storiesOf('Atoms/Button', module)
+storiesOf('Molecules/Button', module)
   .add('basic', () => {
     return (
       <React.Fragment>
