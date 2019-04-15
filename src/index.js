@@ -3,12 +3,13 @@
  */
 
 // Atoms
-import Button from './atoms/Button'
 import ColorBlock from './atoms/ColorBlock'
-import ProfilePicture from './atoms/ProfilePicture'
+import Icon from './atoms/Icon'
 import Type, { H1, H2, H3, H4 } from './atoms/Type'
 
 // Molecules
+import Button from './molecules/Button'
+import ProfilePicture from './molecules/ProfilePicture'
 
 // Organisms
 import Header from './organisms/Header'
@@ -18,9 +19,8 @@ import Header from './organisms/Header'
 // ##############################
 
 // Atoms
-export { Button }
 export { ColorBlock }
-export { ProfilePicture }
+export { Icon }
 export { Type }
 export { H1 }
 export { H2 }
@@ -28,6 +28,8 @@ export { H3 }
 export { H4 }
 
 // Molecules
+export { Button }
+export { ProfilePicture }
 
 // Organisms
 export { Header }
@@ -38,9 +40,8 @@ export { Header }
 
 export default {
   // Atoms
-  Button,
   ColorBlock,
-  ProfilePicture,
+  Icon,
   Type,
   H1,
   H2,
@@ -48,6 +49,8 @@ export default {
   H4,
 
   // Molecules
+  Button,
+  ProfilePicture,
 
   // Organisms
   Header,

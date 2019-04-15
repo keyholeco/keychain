@@ -6,7 +6,7 @@ import ProfilePicture from './index'
 const parentStyles = { fontSize: '1.25em', display: 'flex', alignItems: 'center' }
 const picStyles = { margin: '0.25em' }
 
-storiesOf('Atoms/ProfilePicture', module)
+storiesOf('Molecules/ProfilePicture', module)
   .add('no url', () => {
     return (
       <div style={parentStyles}>
