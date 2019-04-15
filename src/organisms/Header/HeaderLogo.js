@@ -63,7 +63,13 @@ export const HeaderLogo = (props) => {
       style={props.style}
       onClick={props.onClick}
     >
-      <KeyholeLogo className="kc-headerLogo" />
+      <KeyholeLogo
+        className={`
+          kc-headerLogo
+          ${props.theme === 'dark' ? 'kc-headerLogo--themeDark' : ''}
+        `}
+        theme={props.theme}
+      />
       {props.children || null}
     </a>
   )
@@ -73,7 +79,7 @@ HeaderLogo.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-  theme: PropTypes.oneOf(['keyhole', 'custom']),
+  theme: PropTypes.oneOf(['keyhole', 'dark', 'custom']),
   href: PropTypes.string,
   src: PropTypes.string,
   onClick: PropTypes.func,
