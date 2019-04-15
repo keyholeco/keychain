@@ -4,5 +4,5 @@ export default create({
   base: 'light', // do not remove. mandatory variable
 
   brandTitle: 'Keyhole Storybook',
-  brandImage: 'https://cdn.keyhole.co/images/press/gallery/transparent-background-logo.png',
+  brandImage: 'https://cdn.keyhole.co/branding/logo/keyhole-logo-blue.png',
 })
