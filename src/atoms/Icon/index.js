@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const iconTypes = ['solid', 'regular', 'light', 'brands']
-export const iconSizes = ['xs', 'sm', 'lg', '2x', '3x', '5x', '7x', '10x']
+export const iconSizes = ['xs', 'sm', 'lg', '2x', '3x', '4x', '5x', '6x', '7x', '8x', '9x', '10x']
 
 export const mapIconTypeToClass = (type) => {
   switch (type) {
