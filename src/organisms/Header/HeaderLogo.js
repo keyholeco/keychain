@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import KeyholeLogo from './KeyholeLogo'
+import KeyholeLogo from '../../atoms/KeyholeLogo'
 import './headerLogo.styl'
 
 export const HeaderLogo = (props) => {
@@ -68,7 +67,7 @@ export const HeaderLogo = (props) => {
           kc-headerLogo
           ${props.theme === 'dark' ? 'kc-headerLogo--themeDark' : ''}
         `}
-        theme={props.theme}
+        theme={props.theme === 'light' ? 'light' : props.theme === 'dark' ? 'dark' : 'default'}
       />
       {props.children || null}
     </a>
@@ -79,7 +78,7 @@ HeaderLogo.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-  theme: PropTypes.oneOf(['keyhole', 'dark', 'custom']),
+  theme: PropTypes.oneOf(['default', 'dark', 'custom']),
   href: PropTypes.string,
   src: PropTypes.string,
   onClick: PropTypes.func,
@@ -87,7 +86,7 @@ HeaderLogo.propTypes = {
 
 HeaderLogo.defaultProps = {
   style: {},
-  theme: 'keyhole',
+  theme: 'default',
 }
 
 export default HeaderLogo

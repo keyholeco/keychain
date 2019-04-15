@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import Header from './index'
-import Type from '../../atoms/Type'
+import { Type } from '../../../dist'
 
 storiesOf('Organisms/Header.Section', module)
   .add('basic', () => {
