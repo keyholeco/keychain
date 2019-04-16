@@ -12,6 +12,7 @@ export const Type = (props) => {
     ${props.light ? 'kc-type--light' : ''}
     ${props.italics ? 'kc-type--italics' : ''}
     ${props.heading ? 'kc-type--heading' : ''}
+    ${props.caps ? 'kc-type--caps' : ''}
     ${props.weight ? `kc-type--${props.weight}` : ''}
     ${props.size ? `kc-type--${props.size}` : ''}
     ${props.className || ''}
@@ -67,6 +68,7 @@ Type.propTypes = {
   light: PropTypes.bool,
   italics: PropTypes.bool,
   heading: PropTypes.bool,
+  caps: PropTypes.bool,
   weight: PropTypes.oneOf(weights),
   size: PropTypes.oneOf(sizes),
 }
