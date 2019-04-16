@@ -117,6 +117,15 @@
     border-color: darken($gray, 5%)
     color: darken($gray, 30%)
 
+.kc-button--white
+  background-color: $white
+  border-color: $white
+  color: $dark-blue
+  &:hover, &:focus
+    background-color: darken($white, 5%)
+    border-color: darken($white, 5%)
+    color: $dark-blue
+
 .kc-button--outline
   background-color: $white
   border: 2px solid
@@ -135,6 +144,9 @@
     color: $dark-blue
   &.kc-button--orange
     color: $orange
+  &.kc-button--white
+    color: $white
+    background-color: transparent
   &:hover, &:focus
     color: $white
 
@@ -176,8 +188,8 @@
   background-color: transparent
   border: none
   padding: 0
-  color: $orange
-  font-weight: 700
+  opacity: 0.75
   &:hover
-    color: darken($orange, 5%)
+    opacity: 1
+    background-color: transparent
     text-decoration: underline

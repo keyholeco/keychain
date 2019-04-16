@@ -13,6 +13,7 @@ export const buttonColors = [
   'yellow',
   'orange',
   'gray',
+  'white',
 ]
 
 export const Button = (props) => {
