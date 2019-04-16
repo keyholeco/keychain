@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './headerNavigation.styl'
 
+import { eventTrackPropShape, eventTrackPropToAttributes } from '../../utils'
+
 import Icon, { iconTypes, iconSizes } from '../../atoms/Icon'
 import Type from '../../atoms/Type'
 
@@ -31,6 +33,7 @@ const HeaderNavigationLink = (props) => (
     href={props.href}
     onClick={props.onClick}
     style={props.style}
+    {...eventTrackPropToAttributes(props.eventTrack)}
   >
     <Icon className="kc-headerNavigation__icon" icon={props.icon} />
     <Type className="kc-headerNavigation__label" caps>
@@ -50,6 +53,7 @@ HeaderNavigationLink.propTypes = {
   iconType: PropTypes.oneOf(iconTypes),
   iconSize: PropTypes.oneOf(iconSizes),
   iconFixed: PropTypes.bool,
+  eventTrack: PropTypes.shape(eventTrackPropShape),
 }
 
 HeaderNavigationLink.defaultProps = {

@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import KeyholeLogo from '../../atoms/KeyholeLogo'
 import './headerLogo.styl'
+
+import { eventTrackPropShape, eventTrackPropToAttributes } from '../../utils'
+
+import KeyholeLogo from '../../atoms/KeyholeLogo'
 
 export const HeaderLogo = (props) => {
   if (props.theme === 'custom') {
@@ -15,6 +18,7 @@ export const HeaderLogo = (props) => {
           `}
           style={props.style}
           onClick={props.onClick}
+          {...eventTrackPropToAttributes(props.eventTrack)}
         >
           <img src={props.src} className="kc-headerLogo__image" />
           {props.children || null}
@@ -31,6 +35,7 @@ export const HeaderLogo = (props) => {
           `}
           style={props.style}
           onClick={props.onClick}
+          {...eventTrackPropToAttributes(props.eventTrack)}
         >
           <img src={props.src} className="kc-headerLogo__image" />
           {props.children || null}
@@ -46,6 +51,7 @@ export const HeaderLogo = (props) => {
         `}
         style={props.style}
         onClick={props.onClick}
+        {...eventTrackPropToAttributes(props.eventTrack)}
       >
         {props.children || null}
       </div>
@@ -61,6 +67,7 @@ export const HeaderLogo = (props) => {
       `}
       style={props.style}
       onClick={props.onClick}
+      {...eventTrackPropToAttributes(props.eventTrack)}
     >
       <KeyholeLogo
         className={`
@@ -82,6 +89,7 @@ HeaderLogo.propTypes = {
   href: PropTypes.string,
   src: PropTypes.string,
   onClick: PropTypes.func,
+  eventTrack: PropTypes.shape(eventTrackPropShape),
 }
 
 HeaderLogo.defaultProps = {

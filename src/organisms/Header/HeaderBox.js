@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './headerBox.styl'
 
+import { eventTrackPropShape, eventTrackPropToAttributes } from '../../utils'
+
 import Icon from '../../atoms/Icon'
 import Type from '../../atoms/Type'
 
@@ -18,6 +20,7 @@ const HeaderBox = (props) => {
       `}
       style={styles}
       onClick={props.onClick}
+      {...eventTrackPropToAttributes(props.eventTrack)}
     >
       <Type className="kc-headerBox__label" weight={400}>
         {props.label}
@@ -35,6 +38,7 @@ HeaderBox.propTypes = {
   onClick: PropTypes.func,
   label: PropTypes.string.isRequired,
   open: PropTypes.bool,
+  eventTrack: PropTypes.shape(eventTrackPropShape),
 }
 
 HeaderBox.defaultProps = {
@@ -76,6 +80,7 @@ const HeaderBoxDropdownLink = (props) => (
     href={props.href}
     onClick={props.onClick}
     style={props.style}
+    {...eventTrackPropToAttributes(props.eventTrack)}
   >
     <Type className="kc-headerBoxDropdown__label" weight={400}>
       {props.label}
@@ -89,6 +94,7 @@ HeaderBoxDropdownLink.propTypes = {
   href: PropTypes.string,
   onClick: PropTypes.func,
   label: PropTypes.string,
+  eventTrack: PropTypes.shape(eventTrackPropShape),
 }
 
 HeaderBoxDropdownLink.defaultProps = {
