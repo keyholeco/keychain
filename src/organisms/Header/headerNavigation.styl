@@ -1,0 +1,41 @@
+@import '../../_styl/vars/*.styl'
+
+.kc-headerNavigation
+  display: flex
+  height: 100%
+
+.kc-headerNavigation__link
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding: 0 1rem
+  text-transform: uppercase
+  letter-spacing: 1px
+  font-size: .8em
+  line-height: 1.5
+  opacity: .5
+  color: inherit
+  cursor: pointer
+  transition: 300ms ease-in-out
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    height: 3px
+    background-color: transparent
+    transition: 300ms ease-in-out
+  &:hover
+    color: inherit
+    background-color: rgba($white, .05)
+    &:after
+      background-color: rgba($white, .35)
+  &.kc-headerNavigation__link--active
+    opacity: 1
+    &:after
+      background-color: rgba($white, .7)
+  .kc-headerNavigation__icon
+    margin-right: .5em
