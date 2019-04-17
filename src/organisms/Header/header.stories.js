@@ -25,7 +25,11 @@ storiesOf('Organisms/Header', module)
       <Header backgroundColor="#26293C">
         <Header.Logo theme="dark" />
 
-        <Header.Section align="left" style={{ marginLeft: '3em' }}>
+        <Header.Section
+          align="left"
+          className="kc-headerNavigation__wrapper"
+          style={{ marginLeft: window.matchMedia('(max-width: 800px)').matches ? null : '3em' }}
+        >
           <Header.Navigation>
             <Header.Navigation.Link
               label="Brand IQ"
@@ -44,6 +48,7 @@ storiesOf('Organisms/Header', module)
         <Header.Section
           align="right"
           verticalAlign="middle"
+          className="kc-headerButtons__wrapper"
           style={{
             fontSize: '0.8em',
             marginRight: '1rem',
@@ -60,7 +65,7 @@ storiesOf('Organisms/Header', module)
           </Button>
         </Header.Section>
 
-        <Header.Section>
+        <Header.Section className="kc-headerBox__wrapper">
           <Header.Box label="info@keyhole.co" open={false}>
             <Header.Box.Dropdown>
               <Header.Box.Dropdown.Link label="Settings" />

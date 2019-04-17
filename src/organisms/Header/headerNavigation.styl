@@ -3,6 +3,15 @@
 .kc-headerNavigation
   display: flex
   height: 100%
+  @media (max-width: 800px)
+    justify-content: center
+
+.kc-headerNavigation__wrapper
+  @media (max-width: 800px)
+    order: 10
+    width: 100%
+    background-color: $dark-blue
+    border-top: 1px solid rgba($white, .1)
 
 .kc-headerNavigation__link
   position: relative
