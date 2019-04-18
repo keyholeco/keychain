@@ -13,6 +13,7 @@
   border-radius: 4px
   background-color: $white
   padding: 0.5em 1em
+  padding-top: calc(0.5em - 2px) // because border will push the content 2px down from middle
   transition: 300ms ease-in-out
   &:hover, &:focus
     outline: none
@@ -117,6 +118,15 @@
     border-color: darken($gray, 5%)
     color: darken($gray, 30%)
 
+.kc-button--white
+  background-color: $white
+  border-color: $white
+  color: $dark-blue
+  &:hover, &:focus
+    background-color: darken($white, 5%)
+    border-color: darken($white, 5%)
+    color: $dark-blue
+
 .kc-button--outline
   background-color: $white
   border: 2px solid
@@ -135,6 +145,9 @@
     color: $dark-blue
   &.kc-button--orange
     color: $orange
+  &.kc-button--white
+    color: $white
+    background-color: transparent
   &:hover, &:focus
     color: $white
 
@@ -158,6 +171,7 @@
   background-color: transparent
   color: #ccc
   padding: 0.35em 0.5em
+  padding-top: calc(0.35em - 2px)
   &:hover, &:focus
     background-color: transparent
     color: $dark-blue
@@ -176,8 +190,8 @@
   background-color: transparent
   border: none
   padding: 0
-  color: $orange
-  font-weight: 700
+  opacity: 0.75
   &:hover
-    color: darken($orange, 5%)
+    opacity: 1
+    background-color: transparent
     text-decoration: underline

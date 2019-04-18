@@ -11,6 +11,7 @@ storiesOf('Atoms/Type', module)
   .add('light', () => <Type light>{copy}</Type>)
   .add('italics', () => <Type italics>{copy}</Type>)
   .add('heading', () => <Type heading>{copy}</Type>)
+  .add('caps', () => <Type caps>{copy}</Type>)
   .add('weight', () => (
     <div>
       {weights.map((weight) => (

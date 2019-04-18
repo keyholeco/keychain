@@ -1,0 +1,59 @@
+@import '../../_styl/vars/*.styl'
+
+.kc-headerBox
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  color: rgba($white, .8)
+  padding: 0 1rem
+  font-weight: 300
+  font-size: .85em
+  cursor: pointer
+  border-radius: 6px
+  padding: .75em 1.2em
+  margin-right: 1em
+  transition: 300ms ease-in-out
+  @media (max-width: 800px)
+    display: none
+  &:hover, &.kc-headerBox--open
+    color: $white
+    background-color: rgba($black, .25)
+    .kc-icon
+      color: $white
+  .kc-icon
+    margin-left: .75em
+    margin-top: .15em
+    color: rgba($white, .5)
+    transform-origin: center
+    transform: rotate(0deg)
+    transition: 300ms ease-in-out
+  &.kc-headerBox--open
+    .kc-icon
+      transform: rotate(180deg)
+
+.kc-headerBoxDropdown
+  position: absolute
+  top: 100%
+  right: 0
+  min-width: 200px
+  max-width: 300px
+  background-color: $dark-blue
+  border-top: 1px solid rgba($white, .1)
+  display: flex
+  flex-direction: column
+  transform-origin: top
+  transform: scaleY(0)
+  transition: 300ms ease-in-out
+  &.kc-headerBoxDropdown--open
+    transform: scaleY(1)
+  .kc-headerBoxDropdown__link
+    color: $white
+    line-height: 1.5
+    text-align: left
+    padding: .75rem 1rem
+    padding-bottom: 0
+    &:last-child
+      padding-bottom: .75rem
+    &:hover
+      text-decoration: underline
