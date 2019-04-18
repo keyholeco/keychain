@@ -65,7 +65,7 @@ storiesOf('Organisms/Header', module)
           </Button>
         </Header.Section>
 
-        <Header.Section className="kc-headerBox__wrapper">
+        <Header.Section className="kc-headerBox__wrapper" verticalAlign="middle">
           <Header.Box label="info@keyhole.co" open={false}>
             <Header.Box.Dropdown>
               <Header.Box.Dropdown.Link label="Settings" />

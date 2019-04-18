@@ -11,7 +11,7 @@ storiesOf('Organisms/Header.Box', module)
     return (
       <Header backgroundColor="#26293C" style={headerStyles}>
         <Header.Logo theme="dark" />
-        <Header.Section align="right">
+        <Header.Section align="right" verticalAlign="middle">
           <Header.Box label="info@keyhole.co" />
         </Header.Section>
       </Header>
@@ -21,7 +21,7 @@ storiesOf('Organisms/Header.Box', module)
     return (
       <Header backgroundColor="#26293C" style={headerStyles}>
         <Header.Logo theme="dark" />
-        <Header.Section align="right">
+        <Header.Section align="right" verticalAlign="middle">
           <Header.Box label="info@keyhole.co" open={true}>
             <Header.Box.Dropdown>
               <Header.Box.Dropdown.Link

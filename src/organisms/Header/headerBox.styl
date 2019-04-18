@@ -1,9 +1,7 @@
 @import '../../_styl/vars/*.styl'
 
 .kc-headerBox
-  position: relative
   display: flex
-  height: 100%
   align-items: center
   justify-content: center
   text-align: center
@@ -12,26 +10,17 @@
   font-weight: 300
   font-size: .85em
   cursor: pointer
+  border-radius: 6px
+  padding: .75em 1.2em
+  margin-right: 1em
   transition: 300ms ease-in-out
   @media (max-width: 800px)
     display: none
-  &:before
-    content: ''
-    position: absolute
-    z-index: 2
-    left: 0
-    top: 1.5em
-    bottom: 1.5em
-    border-left: 1px solid rgba($white, .1)
-    transition: 300ms ease-in-out
   &:hover, &.kc-headerBox--open
     color: $white
-    background-color: rgba($black, .1)
+    background-color: rgba($black, .25)
     .kc-icon
       color: $white
-    &:before
-      top: 0
-      bottom: 0
   .kc-icon
     margin-left: .75em
     margin-top: .15em
@@ -47,7 +36,8 @@
   position: absolute
   top: 100%
   right: 0
-  left: 1px
+  min-width: 200px
+  max-width: 300px
   background-color: $dark-blue
   border-top: 1px solid rgba($white, .1)
   display: flex
