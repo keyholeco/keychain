@@ -13,6 +13,7 @@
   border-radius: 4px
   background-color: $white
   padding: 0.5em 1em
+  padding-top: calc(0.5em - 2px) // because border will push the content 2px down from middle
   transition: 300ms ease-in-out
   &:hover, &:focus
     outline: none
@@ -170,6 +171,7 @@
   background-color: transparent
   color: #ccc
   padding: 0.35em 0.5em
+  padding-top: calc(0.35em - 2px)
   &:hover, &:focus
     background-color: transparent
     color: $dark-blue
