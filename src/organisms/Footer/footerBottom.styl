@@ -1,0 +1,56 @@
+@import '../../_styl/vars/*.styl'
+
+.kc-footerBottom
+  background-color: transparent
+  padding-top: 2em
+  max-width: 1200px
+  margin: 0 auto
+  border-top: 2px solid rgba($dark-blue, 0.1)
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  @media (max-width: 800px)
+    flex-direction: column
+    text-align: center
+
+.kc-footerBottom__copyright
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  @media (max-width: 800px)
+    flex-direction: column
+    text-align: center
+
+.kc-footerBottom__keyholeLogo
+  width: 150px
+
+.kc-footerBottom__keyholeTagline
+  width: 180px
+  margin: 0 1.5em
+  @media (max-width: 800px)
+    margin: .5em 0
+
+.kc-footerBottom__copyrightText
+  font-size: .9em
+  @media (max-width: 800px)
+    margin-bottom: .5em
+
+.kc-footerBottom__social
+  padding: .5em 0
+  a
+    color: rgba($dark-blue, .8)
+    font-size: .9em
+    margin: 0 .35em
+    transition: 300ms ease-in-out
+    &:hover
+      color: $dark-blue
+
+// Dark
+.kc-footerBottom--dark
+  border-color: rgba($white, 0.1)
+  .kc-footerBottom__social
+    a
+      color: rgba($white, .8)
+      &:hover
+        color: $white
