@@ -14,8 +14,7 @@ import ProfilePicture from './molecules/ProfilePicture'
 
 // Organisms
 import Header from './organisms/Header'
-
-// Templates
+import Footer from './organisms/Footer'
 
 // ##############################
 
@@ -35,8 +34,7 @@ export { ProfilePicture }
 
 // Organisms
 export { Header }
-
-// Templates
+export { Footer }
 
 // ##############################
 
@@ -57,6 +55,5 @@ export default {
 
   // Organisms
   Header,
-
-  // Templates
+  Footer,
 }
