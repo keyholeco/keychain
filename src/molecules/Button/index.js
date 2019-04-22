@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './button.styl'
 
+import { eventTrackPropShape, eventTrackPropToAttributes } from '../../utils'
+
 export const buttonSizes = ['small', 'medium', 'big']
 export const buttonColors = [
   'default',
@@ -38,6 +40,7 @@ export const Button = (props) => {
         style={props.style}
         className={classNames}
         disabled={props.disabled}
+        {...eventTrackPropToAttributes(props.eventTrack)}
       >
         {props.children}
       </a>
@@ -49,6 +52,7 @@ export const Button = (props) => {
       style={props.style}
       className={classNames}
       disabled={props.disabled}
+      {...eventTrackPropToAttributes(props.eventTrack)}
     >
       {props.children}
     </button>
@@ -62,16 +66,15 @@ Button.propTypes = {
   target: PropTypes.string,
   className: PropTypes.string,
   style: PropTypes.object,
-
   plain: PropTypes.bool,
   rounded: PropTypes.bool,
   disabled: PropTypes.bool,
   straight: PropTypes.bool,
   outline: PropTypes.bool,
   caps: PropTypes.bool,
-
   size: PropTypes.oneOf(buttonSizes),
   color: PropTypes.oneOf(buttonColors),
+  eventTrack: PropTypes.shape(eventTrackPropShape),
 }
 
 Button.defaultProps = {

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 export const ucFirst = (str) => {
   if (str === 'youtube') return 'YouTube'
   return typeof str === 'string' ? str.charAt(0).toUpperCase() + str.slice(1) : str
@@ -42,4 +44,26 @@ export const lightOrDark = (x) => {
   }
 
   return 'dark'
+}
+
+export const eventTrackPropShape = {
+  category: PropTypes.string.isRequired,
+  action: PropTypes.string.isRequired,
+  properties: PropTypes.object,
+  value: PropTypes.number,
+}
+
+export const eventTrackPropToAttributes = (eventTrack) => {
+  const obj = {}
+  if (eventTrack) {
+    if (eventTrack.category) obj['data-eventtrack-category'] = eventTrack.category
+    if (eventTrack.action) obj['data-eventtrack-action'] = eventTrack.action
+    if (eventTrack.value) obj['data-eventtrack-value'] = eventTrack.value
+    if (eventTrack.properties) {
+      Object.keys(eventTrack.properties).forEach((key) => {
+        obj[`data-eventtrack-${key}`] = eventTrack.properties[key]
+      })
+    }
+  }
+  return obj
 }
