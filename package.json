@@ -18,8 +18,8 @@
   "homepage": "https://github.com/keyholeco/keychain#readme",
   "scripts": {
     "start": "npm run watch & npm run storybook & wait",
-    "watch": "microbundle --jsx React.createElement --injectStyles true --watch",
-    "build": "rm -rf dist && microbundle build --jsx React.createElement --injectStyles true",
+    "watch": "microbundle --jsx React.createElement --watch",
+    "build": "rm -rf dist && microbundle build --jsx React.createElement",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",

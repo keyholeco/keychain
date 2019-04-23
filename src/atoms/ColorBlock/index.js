@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './colorBlock.styl'
 
 import { lightOrDark } from '../../utils'
 

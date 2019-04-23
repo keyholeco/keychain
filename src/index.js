@@ -2,6 +2,8 @@
  * TODO: programmatically import and export all modules
  */
 
+import './index.styl'
+
 // Atoms
 import ColorBlock from './atoms/ColorBlock'
 import Icon from './atoms/Icon'
