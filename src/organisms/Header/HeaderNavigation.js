@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './headerNavigation.styl'
 
 import { eventTrackPropShape, eventTrackPropToAttributes } from '../../utils'
 

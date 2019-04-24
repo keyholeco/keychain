@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './type.styl'
 
 export const weights = [300, 400, 500, 700, 900]
 export const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl', 'xxxl']
