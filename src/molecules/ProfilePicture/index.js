@@ -1,8 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+export const profilePicturePlatforms = [
+  '',
+  'twitter',
+  'instagram',
+  'youtube',
+  'facebook',
+  'news',
+  'blogs',
+  'forums',
+]
+
 const ProfilePicture = (props) => {
   const [errored, setErrored] = React.useState(!props.src)
+
+  React.useEffect(() => {
+    setErrored(!props.src)
+  }, [props.src])
+
   return (
     <div
       style={props.style}
@@ -22,7 +38,7 @@ const ProfilePicture = (props) => {
 
 ProfilePicture.propTypes = {
   src: PropTypes.string,
-  platform: PropTypes.string,
+  platform: PropTypes.oneOf(profilePicturePlatforms),
   className: PropTypes.string,
   style: PropTypes.object,
 }
