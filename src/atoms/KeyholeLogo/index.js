@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+export const logoThemes = ['default', 'light', 'dark']
+
 export const KeyholeLogo = (props) => {
   let foregroundFill = '#26293C'
   let backgroundFill = '#ffd433'
@@ -100,7 +102,7 @@ export const KeyholeLogo = (props) => {
 KeyholeLogo.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
-  theme: PropTypes.oneOf(['default', 'light', 'dark']),
+  theme: PropTypes.oneOf(logoThemes),
 }
 
 KeyholeLogo.defaultProps = {
