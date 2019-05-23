@@ -1,29 +1,47 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { withKnobs, text, boolean, color, optionsKnob } from '@storybook/addon-knobs'
 
 import Header from './index'
+import { headerLogoThemes } from './HeaderLogo'
 import { Icon, Type, Button } from '../../../dist'
 
+const headerLogoThemesObj = headerLogoThemes.reduce((prev, curr) => {
+  prev[curr] = curr
+  return prev
+}, {})
+
+const optionsKnobOptions = {
+  display: 'select',
+}
+
 storiesOf('Organisms/Header', module)
+  .addDecorator(withKnobs)
   .add('basic', () => {
     return (
-      <Header>
-        <Header.Logo />
+      <Header backgroundColor={color('backgroundColor', '#FFD433')}>
+        <Header.Logo
+          theme={optionsKnob('logo theme', headerLogoThemesObj, 'default', optionsKnobOptions)}
+        />
       </Header>
     )
   })
   .add('backgroundColor', () => {
     return (
-      <Header backgroundColor="#26293C">
-        <Header.Logo theme="dark" />
+      <Header backgroundColor={color('backgroundColor', '#26293C')}>
+        <Header.Logo
+          theme={optionsKnob('logo theme', headerLogoThemesObj, 'dark', optionsKnobOptions)}
+        />
       </Header>
     )
   })
   .add('advanced', () => {
     return (
-      <Header backgroundColor="#26293C">
-        <Header.Logo theme="dark" />
+      <Header backgroundColor={color('backgroundColor', '#26293C')}>
+        <Header.Logo
+          theme={optionsKnob('logo theme', headerLogoThemesObj, 'dark', optionsKnobOptions)}
+        />
 
         <Header.Section
           align="left"
@@ -32,15 +50,16 @@ storiesOf('Organisms/Header', module)
         >
           <Header.Navigation>
             <Header.Navigation.Link
-              label="Brand IQ"
-              icon="star"
-              active={true}
               onClick={action('navigation-link-click')}
+              label={text('nav link 1 - label', 'Brand IQ')}
+              icon={text('nav link 1 - icon', 'star')}
+              active={boolean('nav link 1 - active', true)}
             />
             <Header.Navigation.Link
-              label="Advanced Suite"
-              icon="lock"
               onClick={action('navigation-link-click')}
+              label={text('nav link 2 - label', 'Advanced Suite')}
+              icon={text('nav link 2 - icon', 'lock')}
+              active={boolean('nav link 2 - active', false)}
             />
           </Header.Navigation>
         </Header.Section>
@@ -66,11 +85,23 @@ storiesOf('Organisms/Header', module)
         </Header.Section>
 
         <Header.Section className="kc-headerBox__wrapper" verticalAlign="middle">
-          <Header.Box label="info@keyhole.co" open={false}>
+          <Header.Box
+            label={text('box label', 'info@keyhole.co')}
+            open={boolean('box open', false)}
+          >
             <Header.Box.Dropdown>
-              <Header.Box.Dropdown.Link label="Settings" />
-              <Header.Box.Dropdown.Link label="Administrator" />
-              <Header.Box.Dropdown.Link label="Logout" />
+              <Header.Box.Dropdown.Link
+                label={text('box dropdown link label #1', 'Settings')}
+                onClick={action('header-box-dropdown-link-click')}
+              />
+              <Header.Box.Dropdown.Link
+                label={text('box dropdown link label #2', 'Administrator')}
+                onClick={action('header-box-dropdown-link-click')}
+              />
+              <Header.Box.Dropdown.Link
+                label={text('box dropdown link label #3', 'Logout')}
+                onClick={action('header-box-dropdown-link-click')}
+              />
             </Header.Box.Dropdown>
           </Header.Box>
         </Header.Section>

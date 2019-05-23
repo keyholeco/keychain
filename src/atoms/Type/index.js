@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { duplicateNumbersAsStrings } from '../../utils'
 
-export const weights = [300, 400, 500, 700, 900]
+export const weights = duplicateNumbersAsStrings([300, 400, 500, 700, 900])
 export const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl', 'xxxl']
 
 export const Type = (props) => {
@@ -12,14 +13,14 @@ export const Type = (props) => {
     ${props.italics ? 'kc-type--italics' : ''}
     ${props.heading ? 'kc-type--heading' : ''}
     ${props.caps ? 'kc-type--caps' : ''}
-    ${props.weight ? `kc-type--${props.weight}` : ''}
+    ${props.weight ? `kc-type--${props.weight.toString()}` : ''}
     ${props.size ? `kc-type--${props.size}` : ''}
     ${props.className || ''}
   `
 
   const styles = { ...props.style }
   if (props.weight) {
-    styles.fontWeight = props.weight
+    styles.fontWeight = parseInt(props.weight)
   }
 
   switch (props.size) {

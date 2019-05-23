@@ -67,3 +67,15 @@ export const eventTrackPropToAttributes = (eventTrack) => {
   }
   return obj
 }
+
+/**
+ * Returns a new array with numeric values duplicated as strings.
+ * Needed because knobs addon requires optionsKnob values to be strings
+ * and will throw a console error if they aren't.
+ * @param {array} arr
+ * @returns {array}
+ */
+export const duplicateNumbersAsStrings = (arr) => [
+  ...arr,
+  ...arr.filter((x) => typeof x === 'number').map((x) => x.toString()),
+]

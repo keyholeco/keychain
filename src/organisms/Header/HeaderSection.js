@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+export const headerSectionAlignments = ['left', 'center', 'right']
+export const headerSectionVAlignments = ['top', 'middle', 'bottom', 'stretch']
+
 export const HeaderSection = (props) => {
   const styles = { ...props.style }
   if (props.align) {
@@ -63,8 +66,8 @@ HeaderSection.propTypes = {
    * the latter being placed at the right while the former pushed to the left.
    * The solution to the problem above is to only have align="right" on the former.
    */
-  align: PropTypes.oneOf(['left', 'center', 'right']),
-  verticalAlign: PropTypes.oneOf(['top', 'middle', 'bottom', 'stretch']),
+  align: PropTypes.oneOf(headerSectionAlignments),
+  verticalAlign: PropTypes.oneOf(headerSectionVAlignments),
 }
 
 HeaderSection.defaultProps = {
