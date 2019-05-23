@@ -67,3 +67,13 @@ export const eventTrackPropToAttributes = (eventTrack) => {
   }
   return obj
 }
+
+/**
+ * Returns a new array with numeric values duplicated as strings
+ * @param {array} arr
+ * @returns {array}
+ */
+export const duplicateNumbersAsStrings = (arr) => [
+  ...arr,
+  ...arr.filter((x) => typeof x === 'number').map((x) => x.toString()),
+]
