@@ -5,6 +5,8 @@ import { eventTrackPropShape, eventTrackPropToAttributes } from '../../utils'
 
 import KeyholeLogo from '../../atoms/KeyholeLogo'
 
+export const headerLogoThemes = ['default', 'dark', 'custom']
+
 export const HeaderLogo = (props) => {
   if (props.theme === 'custom') {
     if (props.href && props.src) {
@@ -84,7 +86,7 @@ HeaderLogo.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-  theme: PropTypes.oneOf(['default', 'dark', 'custom']),
+  theme: PropTypes.oneOf(headerLogoThemes),
   href: PropTypes.string,
   src: PropTypes.string,
   onClick: PropTypes.func,
