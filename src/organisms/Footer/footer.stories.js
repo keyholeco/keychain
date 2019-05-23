@@ -1,13 +1,15 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { withKnobs, color } from '@storybook/addon-knobs'
 
 import Footer from './index'
 import { Icon, Type } from '../../../dist'
 
 storiesOf('Organisms/Footer', module)
+  .addDecorator(withKnobs)
   .add('basic', () => {
     return (
-      <Footer>
+      <Footer backgroundColor={color('backgroundColor', '#FFD433')}>
         {footerLinks}
         {footerBottomLight}
       </Footer>
@@ -15,7 +17,7 @@ storiesOf('Organisms/Footer', module)
   })
   .add('dark', () => {
     return (
-      <Footer backgroundColor="#26293C">
+      <Footer backgroundColor={color('backgroundColor', '#26293C')}>
         {footerLinks}
         {footerBottomDark}
       </Footer>
