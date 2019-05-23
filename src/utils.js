@@ -69,7 +69,9 @@ export const eventTrackPropToAttributes = (eventTrack) => {
 }
 
 /**
- * Returns a new array with numeric values duplicated as strings
+ * Returns a new array with numeric values duplicated as strings.
+ * Needed because knobs addon requires optionsKnob values to be strings
+ * and will throw a console error if they aren't.
  * @param {array} arr
  * @returns {array}
  */
