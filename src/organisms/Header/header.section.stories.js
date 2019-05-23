@@ -1,47 +1,63 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { withKnobs, text, optionsKnob } from '@storybook/addon-knobs'
 
 import Header from './index'
+import { headerSectionAlignments, headerSectionVAlignments } from './HeaderSection'
 import { Type } from '../../../dist'
 
 const sectionStyles = { backgroundColor: 'rgba(0,0,0,0.2)', padding: '0.25em' }
 
+const headerSectionAlignmentsObj = headerSectionAlignments.reduce((prev, curr) => {
+  prev[curr] = curr
+  return prev
+}, {})
+
+const headerSectionVAlignmentsObj = headerSectionVAlignments.reduce((prev, curr) => {
+  prev[curr] = curr
+  return prev
+}, {})
+
+const optionsKnobOptions = {
+  display: 'select',
+}
+
 storiesOf('Organisms/Header.Section', module)
+  .addDecorator(withKnobs)
   .add('basic', () => {
     return (
       <Header>
         <Header.Logo />
-        <Header.Section style={sectionStyles}>
-          <Type>Here is another section on the header</Type>
+        <Header.Section
+          style={sectionStyles}
+          align={optionsKnob('align', headerSectionAlignmentsObj, 'left', optionsKnobOptions)}
+          verticalAlign={optionsKnob(
+            'verticalAlign',
+            headerSectionVAlignmentsObj,
+            'stretch',
+            optionsKnobOptions
+          )}
+        >
+          <Type>{text('text', 'Here is another section on the header')}</Type>
         </Header.Section>
       </Header>
     )
   })
-  .add('horizontal alignment', () => {
+  .add('alignment', () => {
     return (
       <Header>
         <Header.Logo />
-        <Header.Section align="right" style={sectionStyles}>
-          <Type>Here is another section on the header</Type>
-        </Header.Section>
-      </Header>
-    )
-  })
-  .add('vertical alignment', () => {
-    return (
-      <Header>
-        <Header.Logo />
-        <Header.Section align="center" verticalAlign="stretch" style={sectionStyles}>
-          <Type>stretch</Type>
-        </Header.Section>
-        <Header.Section align="center" verticalAlign="top" style={sectionStyles}>
-          <Type>top</Type>
-        </Header.Section>
-        <Header.Section align="center" verticalAlign="middle" style={sectionStyles}>
-          <Type>middle</Type>
-        </Header.Section>
-        <Header.Section align="center" verticalAlign="bottom" style={sectionStyles}>
-          <Type>bottom</Type>
+        <Header.Section
+          style={sectionStyles}
+          align={optionsKnob('align', headerSectionAlignmentsObj, 'right', optionsKnobOptions)}
+          verticalAlign={optionsKnob(
+            'verticalAlign',
+            headerSectionVAlignmentsObj,
+            'bottom',
+            optionsKnobOptions
+          )}
+        >
+          <Type>{text('text', 'Here is another section on the header')}</Type>
         </Header.Section>
       </Header>
     )
@@ -50,14 +66,58 @@ storiesOf('Organisms/Header.Section', module)
     return (
       <Header>
         <Header.Logo />
-        <Header.Section align="left" verticalAlign="top" style={sectionStyles}>
-          <Type>Left + Top Aligned</Type>
+        <Header.Section
+          style={sectionStyles}
+          align={optionsKnob(
+            'section 1 - align',
+            headerSectionAlignmentsObj,
+            'left',
+            optionsKnobOptions
+          )}
+          verticalAlign={optionsKnob(
+            'section 1 - verticalAlign',
+            headerSectionVAlignmentsObj,
+            'top',
+            optionsKnobOptions
+          )}
+        >
+          <Type>{text('section 1 - text', 'Left + Top Aligned')}</Type>
         </Header.Section>
-        <Header.Section align="center" verticalAlign="middle" style={sectionStyles}>
-          <Type>Center + Middle Aligned</Type>
+
+        <Header.Section
+          style={sectionStyles}
+          align={optionsKnob(
+            'section 2 - align',
+            headerSectionAlignmentsObj,
+            'center',
+            optionsKnobOptions
+          )}
+          verticalAlign={optionsKnob(
+            'section 2 - verticalAlign',
+            headerSectionVAlignmentsObj,
+            'middle',
+            optionsKnobOptions
+          )}
+        >
+          <Type>{text('section 2 - text', 'Center + Middle Aligned')}</Type>
         </Header.Section>
-        <Header.Section align="right" verticalAlign="bottom" style={sectionStyles}>
-          <Type>Right + Bottom Aligned</Type>
+
+        <Header.Section
+          style={sectionStyles}
+          align={optionsKnob(
+            'section 3 - align',
+            headerSectionAlignmentsObj,
+            'right',
+            optionsKnobOptions
+          )}
+          verticalAlign={optionsKnob(
+            'section 3 - verticalAlign',
+            headerSectionVAlignmentsObj,
+            'bottom',
+            optionsKnobOptions
+          )}
+        >
+          <Type>{text('section 3 - text', 'Right + Bottom Aligned')}</Type>
         </Header.Section>
       </Header>
     )
