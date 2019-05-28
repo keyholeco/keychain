@@ -11,7 +11,14 @@ export const Footer = (props) => {
   }
 
   return (
-    <footer className={`kc-footer ${props.className || ''}`} style={styles}>
+    <footer
+      className={`
+        kc-footer
+        kc-footer--${lightOrDark(props.backgroundColor)}
+        ${props.className || ''}
+      `}
+      style={styles}
+    >
       {props.children}
     </footer>
   )
