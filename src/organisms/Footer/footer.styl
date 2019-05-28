@@ -14,13 +14,47 @@
   line-height: 1.5
   margin-bottom: .5em
 
-.kc-footer__link a
+.kc-footer__link
   display: block
+
+.kc-footer__link a
+  display: inline-block
   font-size: .9em
   line-height: 1.35
   color: inherit
   text-decoration: none
   margin-top: .5em
+  opacity: .8
+  transition: 150ms ease-in-out
+  &:hover
+    opacity: 1
+    position: relative
+    z-index: 2
+    transition: 150ms ease-in-out
+    &:before, &:after
+      content: ''
+      position: absolute
+      display: block
+      background-color: $white
+      border-radius: 1px
+      height: 45%
+      top: 15%
+      left: -.3em
+      right: -.1em
+      z-index: -1
+      opacity: 0
+      transform-origin: left
+      animation: highlightIn 150ms ease-in-out forwards
+    &:after
+      top: 55%
+      left: -.1em
+      right: -.25em
+
+.kc-footer--dark .kc-footer__link a:hover
+  color: $dark-blue
+  &:before, &:after
+    background-color: $yellow
+
 
 .kc-footerSection--wrapper
   display: flex
@@ -35,3 +69,11 @@
   padding: 1em
   @media (max-width: 800px)
     width: 100%
+
+@keyframes highlightIn
+  0%
+    opacity: 1
+    transform: skew(-6deg) scaleX(0)
+  100%
+    opacity: 1
+    transform: skew(-6deg) scaleX(1)
