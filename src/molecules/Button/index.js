@@ -15,6 +15,13 @@ export const buttonColors = [
   'orange',
   'gray',
   'white',
+  'darkBlue',
+  'warmGray1',
+  'warmGray2',
+  'lightBlue',
+  'purple',
+  'lightPink',
+  'lightGreen',
 ]
 
 export const Button = (props) => {
