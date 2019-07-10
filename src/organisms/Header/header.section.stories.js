@@ -4,7 +4,7 @@ import { withKnobs, text, optionsKnob } from '@storybook/addon-knobs'
 
 import Header from './index'
 import { headerSectionAlignments, headerSectionVAlignments } from './HeaderSection'
-import { Type } from '../../../dist'
+import { Type } from '../../atoms/Type'
 
 const sectionStyles = { backgroundColor: 'rgba(0,0,0,0.2)', padding: '0.25em' }
 

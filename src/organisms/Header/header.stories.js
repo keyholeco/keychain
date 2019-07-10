@@ -5,7 +5,9 @@ import { withKnobs, text, boolean, color, optionsKnob } from '@storybook/addon-k
 
 import Header from './index'
 import { headerLogoThemes } from './HeaderLogo'
-import { Icon, Type, Button } from '../../../dist'
+import { Icon } from '../../atoms/Icon'
+import { Type } from '../../atoms/Type'
+import { Button } from '../../molecules/Button'
 
 const headerLogoThemesObj = headerLogoThemes.reduce((prev, curr) => {
   prev[curr] = curr

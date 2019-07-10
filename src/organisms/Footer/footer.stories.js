@@ -3,7 +3,8 @@ import { storiesOf } from '@storybook/react'
 import { withKnobs, color } from '@storybook/addon-knobs'
 
 import Footer from './index'
-import { Icon, Type } from '../../../dist'
+import { Type } from '../../atoms/Type'
+import { Icon } from '../../atoms/Icon'
 
 storiesOf('Organisms/Footer', module)
   .addDecorator(withKnobs)

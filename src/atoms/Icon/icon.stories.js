@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { withKnobs, text, object, optionsKnob, boolean } from '@storybook/addon-knobs'
 
 import Icon, { iconTypes, iconSizes } from './index'
-import { Type, H1 } from '../../../dist'
+import { H1, Type } from '../Type'
 
 const parentStyles = { color: '#26293C' }
 const iconStyles = { margin: '0.25em' }

@@ -2,8 +2,6 @@
  * TODO: programmatically import and export all modules
  */
 
-import './index.styl'
-
 // Atoms
 import ColorBlock from './atoms/ColorBlock'
 import Icon from './atoms/Icon'
@@ -37,25 +35,3 @@ export { ProfilePicture }
 // Organisms
 export { Header }
 export { Footer }
-
-// ##############################
-
-export default {
-  // Atoms
-  ColorBlock,
-  Icon,
-  Type,
-  H1,
-  H2,
-  H3,
-  H4,
-  KeyholeLogo,
-
-  // Molecules
-  Button,
-  ProfilePicture,
-
-  // Organisms
-  Header,
-  Footer,
-}

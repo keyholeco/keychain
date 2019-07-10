@@ -25,6 +25,7 @@ storiesOf('Molecules/ProfilePicture', module)
           .filter((x) => !!x)
           .map((platform, index) => (
             <ProfilePicture
+              key={`profilepic-${index}`}
               style={object('style', picStyles)}
               platform={optionsKnob(
                 `platform ${index + 1}`,
@@ -53,6 +54,7 @@ storiesOf('Molecules/ProfilePicture', module)
       <div style={parentStyles}>
         {[...profilePicturePlatforms].map((platform, index) => (
           <ProfilePicture
+            key={`profilepic-${index}`}
             style={object('style', picStyles)}
             src={text(`src ${index + 1}`, urls[index])}
             platform={optionsKnob(
