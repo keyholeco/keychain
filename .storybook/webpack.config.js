@@ -13,7 +13,7 @@ module.exports = async ({ config, mode }) => {
     include: path.resolve(__dirname, '../'),
   }, {
     test: /\.stories\.jsx?$/,
-    loaders: [require.resolve('@storybook/addon-storysource/loader')],
+    loaders: [require.resolve('@storybook/source-loader')],
     enforce: 'pre',
   });
 
