@@ -10,13 +10,15 @@ storiesOf('Atoms/ColorBlock', module).add('colors', () => {
       {colors.map((row, index) => {
         return (
           <div key={`colorrow-${index}`} className="kc-colorBlocks">
-            {row.map((color) => (
-              <ColorBlock
-                key={`colorblock-${color.code}`}
-                variable={color.variable}
-                color={color.code}
-              />
-            ))}
+            {row.map((color) => {
+              return (
+                <ColorBlock
+                  key={`colorblock-${color.code || color.variable}`}
+                  variable={color.variable}
+                  color={color.code}
+                />
+              )
+            })}
           </div>
         )
       })}

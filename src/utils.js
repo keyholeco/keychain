@@ -11,6 +11,15 @@ export const pad = (nVal, width, zVal) => {
   return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n
 }
 
+export const componentToHex = (c) => {
+  const hex = c.toString(16)
+  return hex.length == 1 ? `0${hex}` : hex
+}
+
+export const rgbToHex = (r, g, b) => {
+  return `#${componentToHex(r)}${componentToHex(g)}${componentToHex(b)}`
+}
+
 export const lightOrDark = (x) => {
   // Variables for red, green, blue values
   let color = x

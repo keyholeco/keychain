@@ -7,7 +7,8 @@ const colors = [
   // Secondary
   [
     { variable: 'dark-blue', code: '#26293C' },
-    { variable: 'white', code: '#FFFFFF' }
+    { variable: 'white', code: '#FFFFFF' },
+    { variable: 'gray' },
   ],
   // Tertiary
   [
@@ -21,6 +22,19 @@ const colors = [
     { variable: 'orange', code: '#FF582C' },
     { variable: 'light-green', code: '#B2D9A6' },
     { variable: 'green', code: '#00B753' },
+    { variable: 'red', code: '#c0392b' },
+  ],
+  [
+    { variable: 'text-gray-1' },
+    { variable: 'text-gray-1-hover' },
+  ],
+  [
+    { variable: 'text-gray-2' },
+    { variable: 'text-gray-2-hover' },
+  ],
+  [
+    { variable: 'text-gray-3' },
+    { variable: 'text-gray-3-hover' },
   ],
 ]
 /* eslint-enable */

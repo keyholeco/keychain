@@ -1,14 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { lightOrDark } from '../../utils'
+import { lightOrDark, rgbToHex } from '../../utils'
 
 const ColorBlock = (props) => {
+  const [colorCode, setColorCode] = React.useState(props.color || '#404')
   const [copied, setCopied] = React.useState(false)
+  const ColorBlockRef = React.useRef(null)
 
-  const copyColorCode = (e) => {
-    const colorCode = e.target.closest('.kc-colorBlock').dataset.color
+  React.useEffect(() => {
+    if (colorCode === '#404' && ColorBlockRef && ColorBlockRef.current) {
+      const colorBlockEl = ColorBlockRef.current
+      if (colorBlockEl && colorBlockEl.querySelector('.kc-color')) {
+        const colorEl = colorBlockEl.querySelector('.kc-color')
+        const rgb = window.getComputedStyle(colorEl).getPropertyValue('background-color')
+        if (rgb) {
+          const rgbArr = rgb
+            .replace(/rgb\(|\)| /gi, '')
+            .split(',')
+            .map((x) => parseInt(x))
+          const hex = rgbToHex(...rgbArr)
+          if (hex) setColorCode(hex)
+        }
+      }
+    }
+  })
 
+  const copyColorCode = () => {
     if (colorCode) {
       setCopied(true)
 
@@ -42,19 +60,20 @@ const ColorBlock = (props) => {
 
   return (
     <div
+      ref={ColorBlockRef}
       className={`kc-colorBlock kc-colorBlock--${props.variable}`}
-      data-color={props.color}
+      data-color={colorCode}
       onClick={copyColorCode}
     >
       <div
         className={`kc-color ${copied ? 'kc-color--copied' : ''}`}
         style={{
-          backgroundColor: props.color,
-          color: lightOrDark(props.color) === 'dark' ? '#fff' : '#26293C',
+          backgroundColor: colorCode === '#404' ? null : colorCode,
+          color: lightOrDark(colorCode) === 'dark' ? '#fff' : '#26293C',
         }}
       >
         <span className="kc-color__variable">${props.variable}</span>
-        <span className="kc-color__code">{copied ? 'Copied Hex Code!' : props.color}</span>
+        <span className="kc-color__code">{copied ? 'Copied Hex Code!' : colorCode}</span>
       </div>
     </div>
   )
