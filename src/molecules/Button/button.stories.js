@@ -4,6 +4,8 @@ import { action } from '@storybook/addon-actions'
 import { withKnobs, text, object, optionsKnob, boolean } from '@storybook/addon-knobs'
 
 import Button, { buttonSizes, buttonColors } from './index'
+import Icon, { iconTypes } from '../../atoms/Icon'
+
 import { ucFirst } from '../../utils'
 
 const elStyles = { margin: '.25em' }
@@ -14,6 +16,11 @@ const buttonSizesObj = buttonSizes.reduce((prev, curr) => {
 }, {})
 
 const buttonColorsObj = buttonColors.reduce((prev, curr) => {
+  prev[curr] = curr
+  return prev
+}, {})
+
+const iconTypesObj = iconTypes.reduce((prev, curr) => {
   prev[curr] = curr
   return prev
 }, {})
@@ -125,5 +132,42 @@ storiesOf('Molecules/Button', module)
       <Button onClick={action('button-click')} caps={boolean('caps', true)}>
         Caps Button
       </Button>
+    )
+  })
+  .add('with Icon', () => {
+    const props = {
+      className: text('className', ''),
+      style: object('style', elStyles),
+      plain: boolean('plain', false),
+      rounded: boolean('rounded', false),
+      disabled: boolean('disabled', false),
+      straight: boolean('straight', false),
+      outline: boolean('outline', false),
+      caps: boolean('caps', false),
+      size: optionsKnob('size', buttonSizesObj, 'medium', optionsKnobOptions),
+      color: optionsKnob('color', buttonColorsObj, 'default', optionsKnobOptions),
+    }
+
+    return (
+      <React.Fragment>
+        <Button onClick={action('button-click')} {...props}>
+          <Icon
+            icon={text('icon-1', 'arrow-left')}
+            type={optionsKnob('type', iconTypesObj, 'regular', optionsKnobOptions)}
+            fixed={false}
+            style={{ marginRight: '0.5em' }}
+          />
+          Default Button
+        </Button>
+        <Button onClick={action('button-click')} href="#" {...props}>
+          Button Link
+          <Icon
+            icon={text('icon-2', 'arrow-right')}
+            type={optionsKnob('type', iconTypesObj, 'regular', optionsKnobOptions)}
+            fixed={false}
+            style={{ marginLeft: '0.5em' }}
+          />
+        </Button>
+      </React.Fragment>
     )
   })

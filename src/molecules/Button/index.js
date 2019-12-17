@@ -22,6 +22,12 @@ export const buttonColors = [
   'purple',
   'lightPink',
   'lightGreen',
+  'textGray1',
+  'textGray1Hover',
+  'textGray2',
+  'textGray2Hover',
+  'textGray3',
+  'textGray3Hover',
 ]
 
 export const Button = (props) => {

@@ -1,5 +1,3 @@
-@import '../../_styl/vars/*.styl'
-
 .kc-button
   font-body()
   display: inline-block
@@ -9,216 +7,160 @@
   appearance: none
   color: $dark-blue
   text-decoration: none
-  border: 2px solid $light-pink
+  border: 2px solid $gray
   border-radius: 4px
   background-color: $white
   padding: 0.5em 1em
   padding-top: calc(0.5em - 2px) // because border will push the content 2px down from middle
-  transition: 300ms ease-in-out
+  transition: 150ms ease-in-out
   &:hover, &:focus
     outline: none
     border-color: $blue
     color: $blue
 
-.kc-button--default
-  background-color: $white
-  border-color: $light-pink
-  color: $dark-blue
-  &:hover, &:focus
-    border-color: $orange
-    color: $orange
+buttonColors = {
+  "default": {
+    "background": $orange,
+    "color": $white,
+    "darken": 5
+  },
+  "primary": {
+    "background": $orange,
+    "color": $white,
+    "darken": 5
+  },
+  "instagram": {
+    "background": $instagram-purple,
+    "color": $white,
+    "darken": 5
+  },
+  "blue": {
+    "background": $blue,
+    "color": $white,
+    "darken": 5
+  },
+  "green": {
+    "background": $green,
+    "color": $white,
+    "darken": 5
+  },
+  "red": {
+    "background": $red,
+    "color": $white,
+    "darken": 5
+  },
+  "yellow": {
+    "background": $yellow,
+    "color": $dark-blue,
+    "darken": 10
+  },
+  "orange": {
+    "background": $orange,
+    "color": $white,
+    "darken": 5
+  },
+  "gray": {
+    "background": $gray,
+    "color": darken($gray, 30%),
+    "darken": 5
+  },
+  "white": {
+    "background": $white,
+    "color": $dark-blue,
+    "darken": 5
+  },
+  "darkBlue": {
+    "background": $dark-blue,
+    "color": $white,
+    "darken": 5
+  },
+  "warmGray1": {
+    "background": $warm-gray-1,
+    "color": $dark-blue,
+    "darken": 5
+  },
+  "warmGray2": {
+    "background": $warm-gray-2,
+    "color": $dark-blue,
+    "darken": 5
+  },
+  "lightBlue": {
+    "background": $light-blue,
+    "color": $dark-blue,
+    "darken": 5
+  },
+  "purple": {
+    "background": $purple,
+    "color": $white,
+    "darken": 5
+  },
+  "lightPink": {
+    "background": $light-pink,
+    "color": $dark-blue,
+    "darken": 5
+  },
+  "lightGreen": {
+    "background": $light-green,
+    "color": $dark-blue,
+    "darken": 5
+  },
+  "textGray1": {
+    "background": $text-gray-1,
+    "color": $white,
+    "darken": 10
+  },
+  "textGray1Hover": {
+    "background": $text-gray-1-hover,
+    "color": $white,
+    "darken": 10
+  },
+  "textGray2": {
+    "background": $text-gray-2,
+    "color": $white,
+    "darken": 5
+  },
+  "textGray2Hover": {
+    "background": $text-gray-2-hover,
+    "color": $white,
+    "darken": 5
+  },
+  "textGray3": {
+    "background": $text-gray-3,
+    "color": $white,
+    "darken": 5
+  },
+  "textGray3Hover": {
+    "background": $text-gray-3-hover,
+    "color": $white,
+    "darken": 5
+  }
+}
 
-.kc-button--primary
-  background-color: $orange
-  border-color: $orange
-  color: $white
-  &:hover, &:focus
-    background-color: darken($orange, 5%)
-    border-color: darken($orange, 5%)
-    color: $white
-
-.kc-button--instagram
-  background-color: $instagram-purple
-  border-color: $instagram-purple
-  color: $white
-  &:hover, &:focus
-    background-color: darken($instagram-purple, 5%)
-    border-color: darken($instagram-purple, 5%)
-    color: $white
-
-.kc-button--blue
-  background-color: $blue
-  border-color: $blue
-  color: $white
-  &:hover, &:focus
-    background-color: darken($blue, 5%)
-    border-color: darken($blue, 5%)
-    color: $white
-
-.kc-button--ghostBlue
-  background-color: $ghost-blue
-  border-color: $ghost-blue
-  color: $white
-  &:hover, &:focus
-    background-color: darken($ghost-blue, 5%)
-    border-color: darken($ghost-blue, 5%)
-    color: $white
-
-.kc-button--green
-  background-color: $green
-  border-color: $green
-  color: $white
-  &:hover, &:focus
-    background-color: darken($green, 5%)
-    border-color: darken($green, 5%)
-    color: $white
-
-.kc-button--red
-  background-color: $secondary-red
-  border-color: $secondary-red
-  color: $white
-  &:hover, &:focus
-    background-color: darken($secondary-red, 5%)
-    border-color: darken($secondary-red, 5%)
-    color: $white
-
-.kc-button--yellow
-  background-color: $yellow
-  border-color: $yellow
-  color: $dark-blue
-  &:hover, &:focus
-    background-color: darken($yellow, 10%)
-    border-color: darken($yellow, 10%)
-    color: $dark-blue
-
-.kc-button--darkBlue
-  background-color: $dark-blue
-  border-color: $dark-blue
-  color: $white
-  &:hover, &:focus
-    background-color: darken($dark-blue, 5%)
-    border-color: darken($dark-blue, 5%)
-    color: $white
-
-.kc-button--orange
-  background-color: $orange
-  border-color: $orange
-  color: $white
-  &:hover, &:focus
-    background-color: darken($orange, 5%)
-    border-color: darken($orange, 5%)
-    color: $white
-
-.kc-button--gray
-  background-color: $gray
-  border-color: $gray
-  color: darken($gray, 30%)
-  &:hover, &:focus
-    background-color: darken($gray, 5%)
-    border-color: darken($gray, 5%)
-    color: darken($gray, 30%)
-
-.kc-button--white
-  background-color: $white
-  border-color: $white
-  color: $dark-blue
-  &:hover, &:focus
-    background-color: darken($white, 5%)
-    border-color: darken($white, 5%)
-    color: $dark-blue
-
-.kc-button--warmGray1
-  background-color: $warm-gray-1
-  border-color: $warm-gray-1
-  color: $dark-blue
-  &:hover, &:focus
-    background-color: darken($warm-gray-1, 5%)
-    border-color: darken($warm-gray-1, 5%)
-    color: $dark-blue
-
-.kc-button--warmGray2
-  background-color: $warm-gray-2
-  border-color: $warm-gray-2
-  color: $dark-blue
-  &:hover, &:focus
-    background-color: darken($warm-gray-2, 5%)
-    border-color: darken($warm-gray-2, 5%)
-    color: $dark-blue
-
-.kc-button--lightBlue
-  background-color: $light-blue
-  border-color: $light-blue
-  color: $dark-blue
-  &:hover, &:focus
-    background-color: darken($light-blue, 5%)
-    border-color: darken($light-blue, 5%)
-    color: $dark-blue
-
-.kc-button--purple
-  background-color: $purple
-  border-color: $purple
-  color: $white
-  &:hover, &:focus
-    background-color: darken($purple, 5%)
-    border-color: darken($purple, 5%)
-    color: $white
-
-.kc-button--lightPink
-  background-color: $light-pink
-  border-color: $light-pink
-  color: $dark-blue
-  &:hover, &:focus
-    background-color: darken($light-pink, 5%)
-    border-color: darken($light-pink, 5%)
-    color: $dark-blue
-
-.kc-button--lightGreen
-  background-color: $light-green
-  border-color: $light-green
-  color: $dark-blue
-  &:hover, &:focus
-    background-color: darken($light-green, 5%)
-    border-color: darken($light-green, 5%)
-    color: $dark-blue
+for col in buttonColors
+  .kc-button--{col}
+    bg = buttonColors[col]["background"]
+    c = buttonColors[col]["color"]
+    dark = buttonColors[col]["darken"] + '%'
+    background-color: bg
+    border-color: bg
+    color: c
+    &:hover, &:focus
+      background-color: darken(bg, dark)
+      border-color: darken(bg, dark)
+      color: c
 
 .kc-button--outline
   background-color: $white
   border: 2px solid
   color: unset
-  &.kc-button--primary
-    color: $orange
-  &.kc-button--blue
-    color: $blue
-  &.kc-button--green
-    color: $green
-  &.kc-button--red
-    color: $secondary-red
-  &.kc-button--yellow
-    color: $yellow
-  &.kc-button--darkBlue
-    color: $dark-blue
-  &.kc-button--orange
-    color: $orange
-  &.kc-button--white
-    color: $white
-    background-color: transparent
-  &.kc-button--white
-    border-color: $gray
-    color: darken($gray, 30%)
-  &.kc-button--warmGray1
-    color: $warm-gray-1
-  &.kc-button--warmGray2
-    color: $warm-gray-2
-  &.kc-button--lightBlue
-    color: $light-blue
-  &.kc-button--purple
-    color: $purple
-  &.kc-button--lightPink
-    color: $light-pink
-  &.kc-button--lightGreen
-    color: $light-green
-  &:hover, &:focus
-    color: $white
+
+for col in buttonColors
+  .kc-button--outline.kc-button--{col}
+    bg = buttonColors[col]["background"]
+    c = buttonColors[col]["color"]
+    color: bg
+    &:hover, &:focus
+      color: c
 
 .kc-button--big, .kc-button--sizeBig
   font-size: 1.3em
@@ -236,31 +178,44 @@
 .kc-button--noBorder
   border: none
 
-.kc-button--noFill
-  background-color: transparent
-  color: #ccc
-  padding: 0.35em 0.5em
-  padding-top: calc(0.35em - 2px)
-  &:hover, &:focus
-    background-color: transparent
-    color: $dark-blue
-
 .kc-button--caps
   text-transform: uppercase
   font-weight: 700
 
 .kc-button--disabled, .kc-button[disabled], .kc-button--disabled[disabled]
-  color: #aaa
-  border-color: #ccc
-  background-color: #ccc
+  color: $text-gray-1
+  border-color: $gray
+  background-color: $gray
   cursor: not-allowed
+  &:hover, &:focus
+    color: $text-gray-1
+    border-color: $gray
+    background-color: $gray
 
 .kc-button--plain
+  display: inline-block
+  padding: 0
   background-color: transparent
   border: none
-  padding: 0
-  opacity: 0.75
-  &:hover
-    opacity: 1
+  border-bottom: 2px solid transparent
+  border-radius: 0
+  color: unset
+  &.kc-button--disabled, &.kc-button[disabled], &.kc-button--disabled[disabled]
+    color: $text-gray-1
+    border-color: transparent
     background-color: transparent
-    text-decoration: underline
+    &:hover, &:focus
+      color: $text-gray-1
+      border-color: transparent
+      background-color: transparent
+
+for col in buttonColors
+  .kc-button--plain.kc-button--{col}
+    bg = buttonColors[col]["background"]
+    c = buttonColors[col]["color"]
+    dark = buttonColors[col]["darken"] + '%'
+    color: bg
+    &:hover, &:focus
+      color: darken(bg, dark)
+      border-color: darken(bg, dark)
+      background-color: transparent
