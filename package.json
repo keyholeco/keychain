@@ -36,15 +36,15 @@
     "release": "npm run release:patch"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.5",
+    "@babel/core": "^7.7.7",
     "@storybook/storybook-deployer": "^2.8.1",
     "autoprefixer-stylus": "^1.0.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
-    "css-loader": "^3.3.2",
-    "eslint": "^6.7.2",
+    "css-loader": "^3.4.1",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
@@ -54,7 +54,7 @@
     "microbundle": "https://github.com/superhussain/microbundle/archive/v0.12.0.tar.gz",
     "onchange": "^6.1.0",
     "prettier": "^1.19.1",
-    "style-loader": "^1.0.1",
+    "style-loader": "^1.1.2",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2"
   },
