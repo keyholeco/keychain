@@ -28,52 +28,34 @@ storiesOf('Atoms/Icon', module)
   .add('basic', () => {
     return (
       <H1 style={parentStyles}>
-        <Icon
-          className={text('className', '')}
-          style={object('style', iconStyles)}
-          icon={text('icon', 'users')}
-          type={optionsKnob('type', iconTypesObj, 'solid', optionsKnobOptions)}
-          size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
-          fixed={boolean('fixed', false)}
-        />
+        {['key', 'whale', 'tablet-android-alt'].map((icon, index) => (
+          <Icon
+            key={`basic-${icon}`}
+            className={text('className', '')}
+            style={object('style', iconStyles)}
+            icon={text(`icon ${index}`, icon)}
+            type={optionsKnob('type', iconTypesObj, 'solid', optionsKnobOptions)}
+            size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
+            fixed={boolean('fixed', false)}
+          />
+        ))}
       </H1>
     )
   })
   .add('brands', () => {
     return (
       <H1 style={parentStyles}>
-        <Icon
-          className={text('className', '')}
-          style={object('style', iconStyles)}
-          type={optionsKnob('type', iconTypesObj, 'brands', optionsKnobOptions)}
-          size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
-          fixed={boolean('fixed', false)}
-          icon={text('icon 1', 'twitter')}
-        />
-        <Icon
-          className={text('className', '')}
-          style={object('style', iconStyles)}
-          type={optionsKnob('type', iconTypesObj, 'brands', optionsKnobOptions)}
-          size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
-          fixed={boolean('fixed', false)}
-          icon={text('icon 2', 'instagram')}
-        />
-        <Icon
-          className={text('className', '')}
-          style={object('style', iconStyles)}
-          type={optionsKnob('type', iconTypesObj, 'brands', optionsKnobOptions)}
-          size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
-          fixed={boolean('fixed', false)}
-          icon={text('icon 3', 'facebook')}
-        />
-        <Icon
-          className={text('className', '')}
-          style={object('style', iconStyles)}
-          type={optionsKnob('type', iconTypesObj, 'brands', optionsKnobOptions)}
-          size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
-          fixed={boolean('fixed', false)}
-          icon={text('icon 4', 'youtube')}
-        />
+        {['twitter', 'instagram', 'tiktok', 'facebook-f', 'youtube'].map((icon, index) => (
+          <Icon
+            key={`brands-${icon}`}
+            className={text('className', '')}
+            style={object('style', iconStyles)}
+            type={optionsKnob('type', iconTypesObj, 'brands', optionsKnobOptions)}
+            size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
+            fixed={boolean('fixed', false)}
+            icon={text(`icon ${index + 1}`, icon)}
+          />
+        ))}
       </H1>
     )
   })
@@ -84,7 +66,7 @@ storiesOf('Atoms/Icon', module)
         <Icon
           className={text('className', '')}
           style={object('style', iconStyles)}
-          icon={text('icon', 'users')}
+          icon={text('icon', 'kiwi-bird')}
           size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
           fixed={boolean('fixed', false)}
           type={optionsKnob('type 1', iconTypesObj, 'solid', optionsKnobOptions)}
@@ -95,7 +77,7 @@ storiesOf('Atoms/Icon', module)
         <Icon
           className={text('className', '')}
           style={object('style', iconStyles)}
-          icon={text('icon', 'users')}
+          icon={text('icon', 'kiwi-bird')}
           size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
           fixed={boolean('fixed', false)}
           type={optionsKnob('type 2', iconTypesObj, 'regular', optionsKnobOptions)}
@@ -106,7 +88,7 @@ storiesOf('Atoms/Icon', module)
         <Icon
           className={text('className', '')}
           style={object('style', iconStyles)}
-          icon={text('icon', 'users')}
+          icon={text('icon', 'kiwi-bird')}
           size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
           fixed={boolean('fixed', false)}
           type={optionsKnob('type 3', iconTypesObj, 'light', optionsKnobOptions)}
@@ -122,7 +104,7 @@ storiesOf('Atoms/Icon', module)
           <Icon
             className={text('className', '')}
             style={object('style', iconStyles)}
-            icon={text('icon', 'users')}
+            icon={text('icon', 'projector')}
             type={optionsKnob('type', iconTypesObj, 'solid', optionsKnobOptions)}
             fixed={boolean('fixed', false)}
             size={optionsKnob(`size ${size}`, iconSizesObj, size, optionsKnobOptions)}
@@ -134,33 +116,39 @@ storiesOf('Atoms/Icon', module)
   .add('fixed width', () => (
     <H1 style={parentStyles}>
       <div>
-        <Icon
-          className={text('className', '')}
-          style={object('style', iconStyles)}
-          icon={text('icon', 'users')}
-          size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
-          fixed={boolean('fixed', true)}
-          type={optionsKnob('type 1', iconTypesObj, 'solid', optionsKnobOptions)}
-        />
+        {['solid', 'regular', 'light'].map((weight) => (
+          <Icon
+            key={`1-${weight}`}
+            className={text('className', '')}
+            style={object('style', iconStyles)}
+            icon={text(`icon 1 ${weight}`, 'mug-tea')}
+            size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
+            fixed={boolean('fixed', true)}
+            type={optionsKnob(`type 1 ${weight}`, iconTypesObj, weight, optionsKnobOptions)}
+          />
+        ))}
+      </div>
+      <div>
+        {['solid', 'regular'].map((weight) => (
+          <Icon
+            key={`2-${weight}`}
+            className={text('className', '')}
+            style={object('style', iconStyles)}
+            icon={text(`icon 2 ${weight}`, 'cocktail')}
+            size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
+            fixed={boolean('fixed', true)}
+            type={optionsKnob(`type 2 ${weight}`, iconTypesObj, weight, optionsKnobOptions)}
+          />
+        ))}
       </div>
       <div>
         <Icon
           className={text('className', '')}
           style={object('style', iconStyles)}
-          icon={text('icon', 'users')}
+          icon={text('icon 3', 'coffee-togo')}
           size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
           fixed={boolean('fixed', true)}
-          type={optionsKnob('type 2', iconTypesObj, 'regular', optionsKnobOptions)}
-        />
-      </div>
-      <div>
-        <Icon
-          className={text('className', '')}
-          style={object('style', iconStyles)}
-          icon={text('icon', 'users')}
-          size={optionsKnob('size', iconSizesObj, 'lg', optionsKnobOptions)}
-          fixed={boolean('fixed', true)}
-          type={optionsKnob('type 3', iconTypesObj, 'light', optionsKnobOptions)}
+          type={optionsKnob('type 3', iconTypesObj, 'solid', optionsKnobOptions)}
         />
       </div>
     </H1>
