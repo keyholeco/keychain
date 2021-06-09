@@ -5,6 +5,7 @@ export const profilePicturePlatforms = [
   '',
   'twitter',
   'instagram',
+  'tiktok',
   'youtube',
   'facebook',
   'news',

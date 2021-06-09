@@ -4,7 +4,7 @@ import { withKnobs, text, object, optionsKnob } from '@storybook/addon-knobs'
 
 import ProfilePicture, { profilePicturePlatforms } from './index'
 
-const parentStyles = { fontSize: '1.25em', display: 'flex', alignItems: 'center' }
+const parentStyles = { fontSize: '1.25em', display: 'flex', alignItems: 'center', margin: '1em' }
 const picStyles = { margin: '0.25em' }
 
 const profilePicturePlatformsObj = profilePicturePlatforms.reduce((prev, curr) => {
@@ -45,9 +45,10 @@ storiesOf('Molecules/ProfilePicture', module)
       'https://cdn.keyhole.co/images/about-us-new/team/sam.jpg',
       'https://cdn.keyhole.co/images/about-us-new/team/laura.jpg',
       'https://cdn.keyhole.co/images/about-us-new/team/joann.jpg',
+      'https://cdn.keyhole.co/images/about-us-new/team/elias.jpg',
+      'https://cdn.keyhole.co/images/about-us-new/team/minaz.jpg',
       'https://cdn.keyhole.co/user_logos/203518_logo_secondary.png?v=1866382919',
       'https://cdn.keyhole.co/user_logos/203518_logo.png?v=764696917',
-      'https://cdn.keyhole.co/images/about-us-new/team/minaz.jpg',
     ]
 
     return (
