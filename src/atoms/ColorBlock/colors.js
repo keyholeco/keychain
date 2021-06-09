@@ -1,5 +1,5 @@
 /* eslint-disable */
-const colors = [
+export const colors = [
   // Primary
   [
     { variable: 'yellow', code: '#FFD433' }
@@ -38,5 +38,18 @@ const colors = [
   ],
 ]
 /* eslint-enable */
+
+export const socialBranding = [
+  [
+    { variable: 'twitter-blue' },
+    { variable: 'instagram-purple' },
+    { variable: 'tiktok-pink' },
+    { variable: 'facebook-blue' },
+    { variable: 'youtube-red' },
+    { variable: 'news-gray' },
+    { variable: 'blogs-yellow' },
+    { variable: 'forums-green' },
+  ],
+]
 
 export default colors

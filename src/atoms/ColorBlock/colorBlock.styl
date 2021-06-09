@@ -22,11 +22,10 @@
     background-color: #eee
     margin: .5em
     border-radius: 4px
-    box-shadow: 0 0 .5em rgba($dark-blue, .2)
     color: $dark-blue
     transition: 150ms ease-in-out
     &:hover
-      box-shadow: 0 0 .75em rgba($dark-blue, .5)
+      box-shadow: 0 0 .5em rgba($dark-blue, .2)
       transform: scale(1.05)
 
   .kc-color__variable
@@ -42,115 +41,7 @@
     opacity: .5
     padding: 0
 
-  &.blue .kc-color, &.kc-colorBlock--blue .kc-color
-    background-color: $blue
-  &.dark-blue .kc-color, &.kc-colorBlock--dark-blue .kc-color
-    background-color: $dark-blue
-  &.ghost-blue .kc-color, &.kc-colorBlock--ghost-blue .kc-color
-    background-color: $ghost-blue
-  &.gray .kc-color, &.kc-colorBlock--gray .kc-color
-    background-color: $gray
-  &.dark-gray .kc-color, &.kc-colorBlock--dark-gray .kc-color
-    background-color: $dark-gray
-  &.mid-blue .kc-color, &.kc-colorBlock--mid-blue .kc-color
-    background-color: $mid-blue
-
-  &.text-default .kc-color, &.kc-colorBlock--text-default .kc-color
-    background-color: $text-default
-  &.text-mid .kc-color, &.kc-colorBlock--text-mid .kc-color
-    background-color: $text-mid
-  &.inactive .kc-color, &.kc-colorBlock--inactive .kc-color
-    background-color: $inactive
-  &.quote .kc-color, &.kc-colorBlock--quote .kc-color
-    background-color: $quote
-
-  &.delete .kc-color, &.kc-colorBlock--delete .kc-color
-    background-color: $delete
-  &.light-grey .kc-color, &.kc-colorBlock--light-grey .kc-color
-    background-color: $light-grey
-
-  &.green .kc-color, &.kc-colorBlock--green .kc-color
-    background-color: $green
-  &.dark-green .kc-color, &.kc-colorBlock--dark-green .kc-color
-    background-color: $dark-green
-  &.light-green .kc-color, &.kc-colorBlock--light-green .kc-color
-    background-color: $light-green
-  &.old-green .kc-color, &.kc-colorBlock--old-green .kc-color
-    background-color: $old-green
-
-  &.yellow .kc-color, &.kc-colorBlock--yellow .kc-color
-    background-color: $yellow
-  &.dark-yellow .kc-color, &.kc-colorBlock--dark-yellow .kc-color
-    background-color: $dark-yellow
-  &.light-yellow .kc-color, &.kc-colorBlock--light-yellow .kc-color
-    background-color: $light-yellow
-
-  &.secondary-blue .kc-color, &.kc-colorBlock--secondary-blue .kc-color
-    background-color: $secondary-blue
-  &.secondary-yellow .kc-color, &.kc-colorBlock--secondary-yellow .kc-color
-    background-color: $secondary-yellow
-  &.secondary-green .kc-color, &.kc-colorBlock--secondary-green .kc-color
-    background-color: $secondary-green
-  &.secondary-red .kc-color, &.kc-colorBlock--secondary-red .kc-color
-    background-color: $secondary-red
-  &.secondary-orange .kc-color, &.kc-colorBlock--secondary-orange .kc-color
-    background-color: $secondary-orange
-
-  &.modal-yellow .kc-color, &.kc-colorBlock--modal-yellow .kc-color
-    background-color: $modal-yellow
-  &.modal-green .kc-color, &.kc-colorBlock--modal-green .kc-color
-    background-color: $modal-green
-  &.modal-blue .kc-color, &.kc-colorBlock--modal-blue .kc-color
-    background-color: $modal-blue
-
-  &.fb-blue .kc-color, &.kc-colorBlock--fb-blue .kc-color
-    background-color: $fb-blue
-  &.facebook-blue .kc-color, &.kc-colorBlock--facebook-blue .kc-color
-    background-color: $facebook-blue
-  &.twitter-blue .kc-color, &.kc-colorBlock--twitter-blue .kc-color
-    background-color: $twitter-blue
-  &.instagram-blue .kc-color, &.kc-colorBlock--instagram-blue .kc-color
-    background-color: $instagram-blue
-  &.instagram-purple .kc-color, &.kc-colorBlock--instagram-purple .kc-color
-    background-color: $instagram-purple
-  &.youtube-red .kc-color, &.kc-colorBlock--youtube-red .kc-color
-    background-color: $youtube-red
-
-  &.red .kc-color, &.kc-colorBlock--red .kc-color
-    background-color: $red
-
-  &.text-gray-1 .kc-color, &.kc-colorBlock--text-gray-1 .kc-color
-    background-color: $text-gray-1
-  &.text-gray-1-hover .kc-color, &.kc-colorBlock--text-gray-1-hover .kc-color
-    background-color: $text-gray-1-hover
-  &.text-grey-1 .kc-color, &.kc-colorBlock--text-grey-1 .kc-color
-    background-color: $text-grey-1
-  &.text-grey-1-hover .kc-color, &.kc-colorBlock--text-grey-1-hover .kc-color
-    background-color: $text-grey-1-hover
-
-  &.text-gray-2 .kc-color, &.kc-colorBlock--text-gray-2 .kc-color
-    background-color: $text-gray-2
-  &.text-gray-2-hover .kc-color, &.kc-colorBlock--text-gray-2-hover .kc-color
-    background-color: $text-gray-2-hover
-  &.text-grey-2 .kc-color, &.kc-colorBlock--text-grey-2 .kc-color
-    background-color: $text-grey-2
-  &.text-grey-2-hover .kc-color, &.kc-colorBlock--text-grey-2-hover .kc-color
-    background-color: $text-grey-2-hover
-
-  &.text-gray-3 .kc-color, &.kc-colorBlock--text-gray-3 .kc-color
-    background-color: $text-gray-3
-  &.text-gray-3-hover .kc-color, &.kc-colorBlock--text-gray-3-hover .kc-color
-    background-color: $text-gray-3-hover
-  &.text-grey-3 .kc-color, &.kc-colorBlock--text-grey-3 .kc-color
-    background-color: $text-grey-3
-  &.text-grey-3-hover .kc-color, &.kc-colorBlock--text-grey-3-hover .kc-color
-    background-color: $text-grey-3-hover
-
-  &.gray .kc-color, &.kc-colorBlock--gray .kc-color
-    background-color: $gray
-  &.grey .kc-color, &.kc-colorBlock--grey .kc-color
-    background-color: $grey
-  &.gray-bg .kc-color, &.kc-colorBlock--gray-bg .kc-color
-    background-color: $gray-bg
-  &.grey-bg .kc-color, &.kc-colorBlock--grey-bg .kc-color
-    background-color: $grey-bg
+colors = 'blue' $blue, 'dark-blue' $dark-blue, 'ghost-blue' $ghost-blue, 'gray' $gray, 'dark-gray' $dark-gray, 'mid-blue' $mid-blue, 'text-default' $text-default, 'text-mid' $text-mid, 'inactive' $inactive, 'quote' $quote, 'delete' $delete, 'light-grey' $light-grey, 'green' $green, 'dark-green' $dark-green, 'light-green' $light-green, 'old-green' $old-green, 'yellow' $yellow, 'dark-yellow' $dark-yellow, 'light-yellow' $light-yellow, 'secondary-blue' $secondary-blue, 'secondary-yellow' $secondary-yellow, 'secondary-green' $secondary-green, 'secondary-red' $secondary-red, 'secondary-orange' $secondary-orange, 'modal-yellow' $modal-yellow, 'modal-green' $modal-green, 'modal-blue' $modal-blue, 'fb-blue' $fb-blue, 'facebook-blue' $facebook-blue, 'twitter-blue' $twitter-blue, 'instagram-purple' $instagram-purple, 'youtube-red' $youtube-red, 'tiktok-pink' $tiktok-pink, 'news-gray' $news-gray, 'blogs-yellow' $blogs-yellow, 'forums-green' $forums-green,  'red' $red, 'text-gray-1' $text-gray-1, 'text-gray-1-hover' $text-gray-1-hover, 'text-grey-1' $text-grey-1, 'text-grey-1-hover' $text-grey-1-hover, 'text-gray-2' $text-gray-2, 'text-gray-2-hover' $text-gray-2-hover, 'text-grey-2' $text-grey-2, 'text-grey-2-hover' $text-grey-2-hover, 'text-gray-3' $text-gray-3, 'text-gray-3-hover' $text-gray-3-hover, 'text-grey-3' $text-grey-3, 'text-grey-3-hover' $text-grey-3-hover, 'gray' $gray, 'grey' $grey, 'gray-bg' $gray-bg, 'grey-bg' $grey-bg
+for pair in colors
+  .kc-colorBlock.{pair[0]}, .kc-colorBlock.kc-colorBlock--{pair[0]} .kc-color
+    background-color: pair[1]
