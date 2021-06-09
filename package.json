@@ -1,6 +1,6 @@
 {
   "name": "@keyholeco/keychain",
-  "version": "0.0.26",
+  "version": "0.1.0",
   "description": "Keyhole's react component library and design system.",
   "author": "Keyhole",
   "license": "MIT",
