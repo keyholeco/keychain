@@ -2,6 +2,13 @@
   "name": "@keyholeco/keychain",
   "version": "0.1.1",
   "description": "Keyhole's react component library and design system.",
+  "keywords": [
+    "design",
+    "system",
+    "react",
+    "storybook",
+    "keyhole"
+  ],
   "author": "Keyhole",
   "license": "MIT",
   "source": "src/index.js",
