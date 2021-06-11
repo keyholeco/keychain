@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/keyholeco/keychain/issues"
   },
-  "homepage": "https://github.com/keyholeco/keychain#readme",
+  "homepage": "https://keyholeco.github.io/keychain",
   "scripts": {
     "start": "npm run clean && npm run watch & npm run serve & npm run storybook & wait",
     "dev": "npm start",
