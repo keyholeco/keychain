@@ -31,5 +31,7 @@ Or just reference the colours directly as needed:
 ## Bookmarks
 
 [Keychain storybook](https://keyholeco.github.io/keychain)
+
 [NPM package](https://www.npmjs.com/package/@keyholeco/keychain)
+
 [GitHub repo](https://github.com/keyholeco/keychain)
