@@ -48,21 +48,17 @@
     "react-dom": "^16.13.1"
   },
   "dependencies": {
-    "@storybook/addon-a11y": "^5.3.19",
-    "@storybook/addon-actions": "^5.3.19",
-    "@storybook/addon-info": "^5.3.19",
-    "@storybook/addon-knobs": "^5.3.19",
-    "@storybook/addon-links": "^5.3.19",
-    "@storybook/addon-notes": "^5.3.19",
-    "@storybook/addon-storysource": "^5.3.19",
-    "@storybook/addon-viewport": "^5.3.19",
-    "@storybook/addons": "^5.3.19",
-    "@storybook/react": "^5.3.19",
-    "@storybook/theming": "^5.3.19"
+    "@storybook/addon-a11y": "^6.3.4",
+    "@storybook/addon-essentials": "^6.3.4",
+    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/addon-links": "^6.3.4",
+    "@storybook/addons": "^6.3.4",
+    "@storybook/react": "^6.3.4",
+    "@storybook/theming": "^6.3.4"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
-    "@storybook/storybook-deployer": "^2.8.6",
+    "@storybook/storybook-deployer": "^2.8.10",
     "autoprefixer-stylus": "^1.0.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
@@ -79,6 +75,8 @@
     "microbundle": "^0.12.3",
     "onchange": "^7.0.2",
     "prettier": "^2.0.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "style-loader": "^1.2.1",
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2"
