@@ -7,7 +7,7 @@ import Header from './index'
 
 const headerStyles = { marginTop: '3em' } // to avoid touching show info button
 
-storiesOf('Organisms/Header.Box', module)
+storiesOf('Organisms/Header/Box', module)
   .addDecorator(withKnobs)
   .add('basic', () => {
     return (

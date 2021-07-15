@@ -22,7 +22,7 @@ const optionsKnobOptions = {
   display: 'select',
 }
 
-storiesOf('Organisms/Header.Section', module)
+storiesOf('Organisms/Header/Section', module)
   .addDecorator(withKnobs)
   .add('basic', () => {
     return (

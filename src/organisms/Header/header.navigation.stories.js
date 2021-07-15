@@ -5,7 +5,7 @@ import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 
 import Header from './index'
 
-storiesOf('Organisms/Header.Navigation', module)
+storiesOf('Organisms/Header/Navigation', module)
   .addDecorator(withKnobs)
   .add('basic', () => {
     return (

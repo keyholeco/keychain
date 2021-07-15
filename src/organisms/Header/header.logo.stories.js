@@ -15,7 +15,7 @@ const optionsKnobOptions = {
   display: 'select',
 }
 
-storiesOf('Organisms/Header.Logo', module)
+storiesOf('Organisms/Header/Logo', module)
   .addDecorator(withKnobs)
   .add('basic', () => {
     return (
