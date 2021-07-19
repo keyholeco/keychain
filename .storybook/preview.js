@@ -6,4 +6,9 @@ export const parameters = {
   viewport: {
     viewports: keyholeViewports,
   },
+  options: {
+    storySort: {
+      method: 'alphabetical'
+    }
+  }
 }
