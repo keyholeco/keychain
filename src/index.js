@@ -3,7 +3,7 @@
  */
 
 // Atoms
-import ColorBlock from './atoms/ColorBlock'
+import ColorBlock from './atoms/DesignTokens'
 import Icon from './atoms/Icon'
 import Type, { H1, H2, H3, H4 } from './atoms/Type'
 import KeyholeLogo from './atoms/KeyholeLogo'
