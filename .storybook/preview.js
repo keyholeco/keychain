@@ -1,6 +1,7 @@
 import keyholeViewports from './keyholeViewports'
 
 import '../dist/index.css'
+import keyholeTheme from './keyholeTheme'
 
 export const parameters = {
   viewport: {
@@ -11,5 +12,8 @@ export const parameters = {
       order: ['Design Tokens', '*'],
       method: 'alphabetical'
     }
+  },
+  docs: {
+    theme: keyholeTheme
   }
 }
