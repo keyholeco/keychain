@@ -11,8 +11,8 @@ const ColorBlock = ({ name }) => {
   useEffect(() => {
     if (colorCode === '#404' && ColorBlockRef && ColorBlockRef.current) {
       const colorBlockEl = ColorBlockRef.current
-      if (colorBlockEl && colorBlockEl.querySelector('.kc-color')) {
-        const colorEl = colorBlockEl.querySelector('.kc-color')
+      if (colorBlockEl && colorBlockEl.querySelector('.js-colorBlock')) {
+        const colorEl = colorBlockEl.querySelector('.js-colorBlock')
         const rgb = window.getComputedStyle(colorEl).getPropertyValue('background-color')
         if (rgb) {
           const rgbArr = rgb
@@ -63,7 +63,10 @@ const ColorBlock = ({ name }) => {
       data-color={colorCode}
       onClick={copyColorCode}
     >
-      <div style={{ ...defaultStyles.colorBlock, backgroundColor: `var(--color-${name})` }} />
+      <div
+        className="js-colorBlock"
+        style={{ ...defaultStyles.colorBlock, backgroundColor: `var(--color-${name})` }}
+      />
       <div style={defaultStyles.descBlock}>
         <p style={defaultStyles.desc}>{name}</p>
         <p style={{ ...defaultStyles.desc, ...defaultStyles.descHex }}>
