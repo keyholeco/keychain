@@ -8,6 +8,7 @@ export const parameters = {
   },
   options: {
     storySort: {
+      order: ['Design Tokens', '*'],
       method: 'alphabetical'
     }
   }

@@ -1,25 +1,19 @@
 /**
- * TODO: programmatically import and export all modules
+ * List of modules exported for Keychain package installation usage
+ * optional for future: progammatically export modules
  */
 
-// Atoms
-import ColorBlock from './atoms/DesignTokens'
 import Icon from './atoms/Icon'
 import Type, { H1, H2, H3, H4 } from './atoms/Type'
 import KeyholeLogo from './atoms/KeyholeLogo'
 
-// Molecules
 import Button from './molecules/Button'
 import ProfilePicture from './molecules/ProfilePicture'
 
-// Organisms
 import Header from './organisms/Header'
 import Footer from './organisms/Footer'
 
-// ##############################
-
 // Atoms
-export { ColorBlock }
 export { Icon }
 export { Type }
 export { H1 }
