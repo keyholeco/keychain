@@ -1,29 +1,32 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withKnobs, color } from '@storybook/addon-knobs'
 
 import Footer from './index'
 import { Type } from '../../atoms/Type'
 import { Icon } from '../../atoms/Icon'
 
-storiesOf('Organisms/Footer', module)
-  .addDecorator(withKnobs)
-  .add('basic', () => {
-    return (
-      <Footer backgroundColor={color('backgroundColor', '#FFD433')}>
-        {footerLinks}
-        {footerBottomLight}
-      </Footer>
-    )
-  })
-  .add('dark', () => {
-    return (
-      <Footer backgroundColor={color('backgroundColor', '#26293C')}>
-        {footerLinks}
-        {footerBottomDark}
-      </Footer>
-    )
-  })
+export default {
+  component: Footer,
+  title: 'Organisms/Footer',
+}
+
+const Template = (args) => (
+  <Footer {...args}>
+    {footerLinks}
+    {args.theme === 'dark' ? footerBottomDark : footerBottomLight}
+  </Footer>
+)
+
+export const Basic = Template.bind({})
+Basic.args = {
+  backgroundColor: '#FFD433',
+  theme: 'light',
+}
+
+export const Dark = Template.bind({})
+Dark.args = {
+  backgroundColor: '#26293C',
+  theme: 'dark',
+}
 
 const footerLinks = (
   <Footer.Section className="kc-footerSection--wrapper">

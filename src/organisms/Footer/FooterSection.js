@@ -52,7 +52,13 @@ export const FooterSection = (props) => {
 }
 
 FooterSection.propTypes = {
+  /**
+   * Style object that can be attached to the component.
+   */
   style: PropTypes.object,
+  /**
+   * CSS class names that can be appended to the component.
+   */
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
   /**
