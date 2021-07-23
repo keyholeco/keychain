@@ -100,8 +100,21 @@ export const KeyholeLogo = (props) => {
 }
 
 KeyholeLogo.propTypes = {
+  /**
+   * Style object that can be attached to the component.
+   */
   style: PropTypes.object,
+  /**
+   * CSS class names that can be appended to the component.
+   */
   className: PropTypes.string,
+  /**
+   * Default theme = dark blue icon with yellow fill. Meant to be used with yellow background.
+   *
+   * Light theme = dark blue icon with white fill. Meant to be used with white background.
+   *
+   * Dark theme = yellow icon with dark blue fill. Meant to be used with dark blue background.
+   */
   theme: PropTypes.oneOf(logoThemes),
 }
 
