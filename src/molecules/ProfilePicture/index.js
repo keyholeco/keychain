@@ -38,10 +38,22 @@ const ProfilePicture = (props) => {
 }
 
 ProfilePicture.propTypes = {
-  src: PropTypes.string,
-  platform: PropTypes.oneOf(profilePicturePlatforms),
+  /**
+   * CSS class names that can be appended to the component.
+   */
   className: PropTypes.string,
+  /**
+   * Style object that can be attached to the component.
+   */
   style: PropTypes.object,
+  /**
+   * Profile picture URL.
+   */
+  src: PropTypes.string,
+  /**
+   * For the upper right corner platform icon.
+   */
+  platform: PropTypes.oneOf(profilePicturePlatforms),
 }
 
 ProfilePicture.defaultProps = {
