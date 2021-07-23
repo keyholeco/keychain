@@ -61,8 +61,17 @@ export const Type = (props) => {
 }
 
 Type.propTypes = {
+  /**
+   * The copy that actually goes into the h1/h2/h3/h4/span.
+   */
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  /**
+   * CSS class names that can be appended to the component.
+   */
   className: PropTypes.string,
+  /**
+   * Style object that can be attached to the component.
+   */
   style: PropTypes.object,
   bold: PropTypes.bool,
   light: PropTypes.bool,

@@ -29,6 +29,9 @@ Bold.args = { bold: true }
 export const Light = Template.bind({})
 Light.args = { light: true }
 
+export const Weight = Template.bind({})
+Weight.args = { weight: 300 }
+
 export const Italics = Template.bind({})
 Italics.args = { italics: true }
 
@@ -37,9 +40,6 @@ Heading.args = { heading: true }
 
 export const Caps = Template.bind({})
 Caps.args = { caps: true }
-
-export const Weight = Template.bind({})
-Weight.args = { weight: 300 }
 
 export const Size = Template.bind({})
 Size.args = { size: 'xxxl' }
