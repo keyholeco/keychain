@@ -1,46 +1,32 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withKnobs, text, object, optionsKnob } from '@storybook/addon-knobs'
 
-import KeyholeLogo, { logoThemes } from './index'
+import KeyholeLogo from './index'
 
-const defaultStyles = { display: 'inline-block', padding: '1.5em' }
-
-const logoThemesObj = logoThemes.reduce((prev, curr) => {
-  prev[curr] = curr
-  return prev
-}, {})
-
-const optionsKnobOptions = {
-  display: 'select',
+export default {
+  component: KeyholeLogo,
+  title: 'Atoms/Logo',
 }
 
-storiesOf('Atoms/KeyholeLogo', module)
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <div style={{ ...defaultStyles, backgroundColor: '#FFD433' }}>
-      <KeyholeLogo
-        className={text('className', '')}
-        style={object('style', {})}
-        theme={optionsKnob('type', logoThemesObj, 'default', optionsKnobOptions)}
-      />
-    </div>
-  ))
-  .add('light', () => (
-    <div style={{ ...defaultStyles, backgroundColor: '#fff' }}>
-      <KeyholeLogo
-        className={text('className', '')}
-        style={object('style', {})}
-        theme={optionsKnob('type', logoThemesObj, 'light', optionsKnobOptions)}
-      />
-    </div>
-  ))
-  .add('dark', () => (
-    <div style={{ ...defaultStyles, backgroundColor: '#26293C' }}>
-      <KeyholeLogo
-        className={text('className', '')}
-        style={object('style', {})}
-        theme={optionsKnob('type', logoThemesObj, 'dark', optionsKnobOptions)}
-      />
-    </div>
-  ))
+const getMatchingBackgroundColor = (theme) =>
+  theme === 'dark'
+    ? 'var(--color-dark-blue'
+    : theme === 'light'
+    ? 'var(--color-white)'
+    : 'var(--color-yellow)'
+
+const Template = (args) => (
+  <div
+    style={{
+      display: 'inline-block',
+      padding: '1.5em',
+      backgroundColor: getMatchingBackgroundColor(args.theme),
+    }}
+  >
+    <KeyholeLogo {...args} />
+  </div>
+)
+
+export const Logo = Template.bind({})
+Logo.args = {
+  theme: 'default',
+}
