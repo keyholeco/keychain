@@ -3,4 +3,6 @@ import keyholeTheme from './keyholeTheme'
 
 addons.setConfig({
   theme: keyholeTheme,
+
+  panelPosition: 'right',
 })
