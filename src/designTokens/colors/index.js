@@ -44,7 +44,7 @@ const defaultStyles = {
   descBlock: { padding: '.25em' },
   desc: { fontSize: '.85em', fontWeight: 500, margin: 0 },
   descHex: { fontWeight: 400 },
-  colorBlock: { width: '125px', height: '120px' },
+  colorBlock: { width: '125px', height: '112px' },
 }
 
 export default ColorBlock

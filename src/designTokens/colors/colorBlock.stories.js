@@ -21,7 +21,7 @@ const colorSet = [
 export const Colors = () =>
   colorSet.map((setObj) => (
     <div key={`colorset-${setObj.id}`}>
-      <h2 style={{ margin: '1em 0 .5em' }}>{setObj.name}</h2>
+      <h2 style={defaultStyles.h2}>{setObj.name}</h2>
 
       {setObj.set.map((row, index) => (
         <div key={`colorrow-${index}`} style={defaultStyles.blocks}>
@@ -34,6 +34,7 @@ export const Colors = () =>
   ))
 
 const defaultStyles = {
+  h2: { margin: '1em 0 .5em' },
   blocks: {
     display: 'flex',
     flexWrap: 'wrap',
