@@ -40,7 +40,8 @@ export const WithUrls = () => (
       'https://cdn.keyhole.co/images/about-us-new/team/joann.jpg',
       'https://cdn.keyhole.co/images/about-us-new/team/minaz.jpg',
       'https://cdn.keyhole.co/images/about-us-new/team/amar.jpg',
-      'https://cdn.keyhole.co/images/about-us-new/team/elias.jpg',
+      'https://cdn.keyhole.co/branding/symbol/keyhole-symbol-yellow.png',
+      'https://cdn.keyhole.co/branding/symbol/keyhole-symbol-blue.png',
       'https://cdn.keyhole.co/user_logos/203518_logo_secondary.png?v=1866382919',
       'https://cdn.keyhole.co/user_logos/203518_logo.png?v=764696917',
     ].map((url, index) => (

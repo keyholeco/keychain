@@ -36,6 +36,7 @@ export const socialBranding = [
     'tiktok-pink',
     'facebook-blue',
     'youtube-red',
+    'linkedin-blue',
     'news-gray',
     'blogs-yellow',
     'forums-green',
